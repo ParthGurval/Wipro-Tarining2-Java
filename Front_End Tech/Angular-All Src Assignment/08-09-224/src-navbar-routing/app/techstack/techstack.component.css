@@ -1,0 +1,33 @@
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 10px 10px 10px 10px; 
+}
+
+table th{
+    font-family: 'Sofia', cursive;
+}
+
+table td{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: larger;
+}
+
+h2{
+    background-color: #ff3434;
+    color: wheat;
+    font-family: 'Poppins', sans-serif;
+}
+
+table tr:hover{
+    background-color: #93ff4b;
+    color: blue;
+}
+
+tbody tr:hover{
+background-color: rgb(244, 177, 130);
+}
+tr:nth-child(even){
+background-color: rgb(57, 107, 216);
+}

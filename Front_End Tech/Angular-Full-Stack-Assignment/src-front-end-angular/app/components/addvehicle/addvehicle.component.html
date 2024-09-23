@@ -1,0 +1,55 @@
+<p>addvehicle works!</p>
+
+
+<form  #myform="ngForm"  method="post"  class="container col-md-4" (ngSubmit)="insertVehicle(myform.value)">
+    <!-- <div class="form-group">
+    <label>Eid:</label><input type="number" class="form-control"  name="eid"  #eidcontrol="ngModel"   required  ngModel>
+    <span  style="color: red;"  *ngIf="eidcontrol.touched && eidcontrol.invalid">Eid is Mandatory</span>
+    </div> -->
+    
+    <div class="form-group">
+        <label>Vehicle Type: </label><input type="text" class="form-control"  #vehicleTypecontrol="ngModel" name="vehicleType"  required ngModel>
+        <span  style="color: red;"  *ngIf="vehicleTypecontrol.touched && vehicleTypecontrol.invalid">Vehicle Type is Mandatory</span>
+    </div>
+
+    <div class="form-group">
+        <label>Model Name: </label><input type="text" class="form-control"  #modelNamecontrol="ngModel" name="modelName"  required ngModel>
+        <span  style="color: red;"  *ngIf="modelNamecontrol.touched && modelNamecontrol.invalid">Model Name is Mandatory</span>
+    </div>
+
+    <div class="form-group">
+        <label>Date Of Purchase:</label><input type="date"  class="form-control" #purchaseDatecontrol="ngModel" name="purchaseDate"  required ngModel>
+        <span  style="color: red;"  *ngIf="purchaseDatecontrol.touched && purchaseDatecontrol.invalid">Date Of Purchase is Mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Vehicle Number: </label><input type="text" class="form-control"  #vehicleNumbercontrol="ngModel" name="vehicleNumber"  required ngModel>
+        <span  style="color: red;"  *ngIf="vehicleNumbercontrol.touched && vehicleNumbercontrol.invalid">Vehicle Number is Mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Age of Vehicle:</label><input type="number"  class="form-control" #vehicleAgecontrol="ngModel" name="vehicleAge"  required ngModel>
+        <span  style="color: red;"  *ngIf="vehicleAgecontrol.touched && vehicleAgecontrol.invalid">Vehicle Age is Mandatory</span>
+    </div>
+    
+    <div class="form-group">
+        <label>Owner Name: </label><input type="text" class="form-control"  #ownerNamecontrol="ngModel" name="ownerName"  required ngModel>
+        <span  style="color: red;"  *ngIf="ownerNamecontrol.touched && ownerNamecontrol.invalid">Owner Name is Mandatory</span>
+    </div>
+ 
+    <div class="form-group">
+        <label>Purchasing Cost: </label><input type="number"  class="form-control" #purchaseCostcontrol="ngModel" name="purchaseCost"  required ngModel>
+        <span  style="color: red;"  *ngIf="purchaseCostcontrol.touched && purchaseCostcontrol.invalid">Purchasing Cost is Mandatory</span>
+    </div>
+
+    <div class="form-group">
+        <label>Current Market Cost: </label><input type="number"  class="form-control" #currentCostcontrol="ngModel" name="currentCost"  required ngModel>
+        <span  style="color: red;"  *ngIf="currentCostcontrol.touched && currentCostcontrol.invalid">Current Market Cost is Mandatory</span>
+    </div>
+        
+    
+    
+    <button type="submit"  class="btn btn-primary" [disabled]="myform.invalid" >Submit</button>
+    
+    
+    </form>

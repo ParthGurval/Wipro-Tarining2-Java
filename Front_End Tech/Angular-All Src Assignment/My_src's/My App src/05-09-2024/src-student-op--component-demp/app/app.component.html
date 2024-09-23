@@ -1,0 +1,32 @@
+
+<h1>WELCOME TO ANGULAR</h1>
+
+ Title: {{title}}  <br>
+
+ Order Id : {{order_id}}  <br>
+
+ Customer Name:  {{cust_name}}  <br>
+
+ Customer Age:  {{cust_age}}  <br>
+
+ Customer Balance:  {{cust_balance}}  <br>
+
+ Customer Married: {{cust_married}} <br> <br>
+
+
+<!-- Button to call sayHello function -->
+<button type="button" (click)="sayHello()">Hello</button> <br>
+
+<!-- Button to update balance -->
+<button type="button" (click)="updateBalance(10000)">Update Balance</button> <br>
+
+<!-- Button to toggle marital status -->
+<button type="button" (click)="toggleMarriedStatus()">Toggle Married Status</button> <br>
+
+<!-- Button to increment age -->
+<button type="button" (click)="incrementAge()">Increment Age</button> <br>
+
+<!-- Button to reset customer details -->
+<button type="button" (click)="resetCustomerDetails()">Reset Details</button> <br>
+
+<app-student></app-student>

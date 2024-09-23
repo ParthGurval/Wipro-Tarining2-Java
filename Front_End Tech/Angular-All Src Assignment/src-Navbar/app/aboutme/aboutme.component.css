@@ -1,0 +1,14 @@
+
+h2 {
+    background-color: #FF3434;
+    color: wheat;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-family: 'Sofia', cursive;
+}
+
+p, ul, li {
+    font-family: 'Signika Negative', sans-serif;
+}

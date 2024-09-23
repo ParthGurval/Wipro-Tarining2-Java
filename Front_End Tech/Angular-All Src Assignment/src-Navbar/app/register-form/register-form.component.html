@@ -1,0 +1,66 @@
+
+
+<form >
+    <h2>Registration Form</h2>
+
+    <label for="uname" id="unm">User Name:</label>
+    <input type="text" name="fname" required placeholder="Enter UserName"> 
+
+    <label for="Password" id="pwd">Password:</label>
+    <input type="password" name="pswd" required placeholder="Enter Password"> 
+
+    <label for="Email" id="em">Email:</label>
+    <input type="email" name="em" placeholder="Enter Email"> 
+
+    <label for="date" id="dt">Date:</label>
+    <input type="date" name="dt"> 
+
+    <label for="Mob Num" id="numb">Mobile Number:</label>
+    <input type="number" name="numb" placeholder="Mobile Number"> 
+
+    <label for="Range" id="range">Range:</label>
+    <input type="range" name="range"> 
+
+    <label for="Attachment" id="filesattach">Attach File:</label>
+    <input type="file" name="filesattach"> 
+
+    <div class="gender">
+        <label for="gender" id="gd"> Gender: </label> <br>
+        <input type="radio" name="gender" id="male" value="male"> Male 
+        <input type="radio" name="gender" id="female" value="female"> Female 
+        <input type="radio" name="gender" id="other" value="other"> Prefer not to say 
+    </div>
+
+    <div class="courses">
+        <label for="Coursed" id="course"> Courses: </label> <br>
+        <input type="checkbox" name="courses" value="Java"> Java
+        <input type="checkbox" name="courses" value="python"> Python
+        <input type="checkbox" name="courses" value="web"> Html/ Css
+        <input type="checkbox" name="courses" value="aws"> AWS
+        <input type="checkbox" name="courses" value="devops"> DevOps
+        <input type="checkbox" name="courses" value="ai"> AIML
+        <input type="checkbox" name="courses" value="ds"> DS 
+    </div>
+
+    <label for="quf"> Qualification: </label>
+    <select name="quf">
+        <option value="">--Select--</option>
+        <option value="B.tech">B.Tech</option>
+        <option value="B.E.">B.E.</option>
+        <option value="M.Tech">M.Tech</option>
+        <option value="M.S.">M.S.</option>
+        <option value="M.B.A.">M.B.A.</option>
+    </select>
+
+    <label for="pin_code"> Pin Code: </label>
+    <input type="text" name="pin" pattern="[0-9]{6}" title="6 digit pin code">
+
+    <label for="ref_id"> Refer Name: </label>
+    <input type="text" name="ref" pattern="[A-Za-z0-9]{2,7}[@#$][A-Za-z0-9]" title="2-7 alphanumeric followed by @, #, $, then alphanumeric">
+
+    <label for="rmk"> Remark: </label>
+    <textarea name="rmark" id="rmk" cols="40" rows="6"></textarea> 
+
+    <button type="submit">Login Now</button>
+    <button type="reset">Reset All</button> 
+</form>

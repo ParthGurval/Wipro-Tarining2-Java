@@ -1,0 +1,79 @@
+<h1>REACTIVE FORM DEMO</h1>
+
+<form class="container col-lg-5" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+  <!-- User ID -->
+  <label class="headField"> Enter User Id: </label>
+
+  <input type="text" formControlName="userId" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['userId'].errors }">
+  <div style="color:red" *ngIf="f['userId'].errors?.['required']" class="warings"> User ID is Mandatory </div>
+  <div style="color:rgb(65, 65, 255)" *ngIf="f['userId'].errors?.['minlength']" class="warings"> UserId should be min 4 chars </div>
+  <div style="color:rgb(65, 65, 255)" *ngIf="f['userId'].errors?.['maxlength']" class="warings"> UserId should be max 70 chars </div>
+
+  <!-- Username -->
+  <label class="headField"> Enter User Name: </label>
+
+  <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }">
+  <div style="color:red" *ngIf="f['username'].errors?.['required']" class="warings"> User Name is Mandatory </div>
+  <div style="color:rgb(65, 65, 255)" *ngIf="f['username'].errors?.['minlength']" class="warings"> UserId should be min 4 chars </div>
+  <div style="color:rgb(65, 65, 255)" *ngIf="f['username'].errors?.['maxlength']" class="warings"> UserId should be max 70 chars </div>
+
+  <!-- Email -->
+  <label class="headField"> Enter Email: </label>
+
+  <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+  <div style="color:red" *ngIf="f['email'].errors?.['required']" class="warings"> Email Id is Mandatory </div>
+  <div style="color:rgb(65, 65, 255)" *ngIf="f['email'].errors?.['email']" class="warings"> Email should be in valid format </div>
+
+<!-- Password -->
+<label class="headField"> Enter Password: </label>
+<input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }">
+
+<!-- Required error -->
+<div style="color:red" *ngIf="f['password'].errors?.['required']" class="warings"> Password is Mandatory </div>
+
+<!-- Minimum length error -->
+<div style="color:rgb(65, 65, 255)" *ngIf="f['password'].errors?.['minlength']" class="warings"> Password should be at least 4 characters </div>
+
+<!-- Uppercase error -->
+<div style="color:rgb(65, 65, 255)" *ngIf="passwordHasError('uppercase')" class="warings"> Password must contain at least one uppercase letter </div>
+
+<!-- Lowercase error -->
+<div style="color:rgb(65, 65, 255)" *ngIf="passwordHasError('lowercase')" class="warings"> Password must contain at least one lowercase letter </div>
+
+<!-- Number error -->
+<div style="color:rgb(65, 65, 255)" *ngIf="passwordHasError('number')" class="warings"> Password must contain at least one number </div>
+
+<!-- Special character error -->
+<div style="color:rgb(65, 65, 255)" *ngIf="passwordHasError('special')" class="warings"> Password must contain at least one special character </div>
+  
+ <!-- Mobile -->
+<label class="headField"> Enter Mobile Number: </label>
+<input type="number" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['mobile'].errors }">
+<div style="color:red" *ngIf="f['mobile'].errors?.['required']" class="warings"> Mobile Number is Mandatory </div>
+<div style="color:rgb(65, 65, 255)" *ngIf="f['mobile'].errors?.['minlength']" class="warings"> Mobile Number should be exactly 10 digits </div>
+<div style="color:rgb(65, 65, 255)" *ngIf="f['mobile'].errors?.['maxlength']" class="warings"> Mobile Number should be exactly 10 digits </div>
+
+
+  <!-- Gender -->
+  <label class="headField"> Select Gender: </label>
+  
+  <div>
+    <input type="radio" formControlName="gender" value="male"> Male <br>
+    <input type="radio" formControlName="gender" value="female"> Female <br>
+    <input type="radio" formControlName="gender" value="other"> Other <br>
+  </div>
+
+  <div style="color:red" *ngIf="f['gender'].errors?.['required']" class="warings"> Gender is mandatory </div>
+
+  <!-- Courses -->
+  <label class="headField"> Select Courses: </label>
+
+  <div *ngFor="let course of courseOptions">
+    <input type="checkbox" [value]="course" (change)="onCourseChange($event)">{{ course }}
+  </div>
+  <div style="color:red" *ngIf="!validCourses" class="warings"> Please select at least 2 courses </div>
+
+  <!-- Submit -->
+  <button type="submit" class="btn btn-danger">Register</button>
+</form>

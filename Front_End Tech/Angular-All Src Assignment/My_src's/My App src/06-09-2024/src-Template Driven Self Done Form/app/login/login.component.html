@@ -1,0 +1,116 @@
+<p>login works!</p>
+
+
+<fieldset style="color: black;">
+
+   <legend> Login Form </legend>
+   
+   <form class="container col-md-5" autocomplete="off" #userForm=ngForm  (ngSubmit)="getFormData(userForm.value)">
+
+      <div class="form-group">
+   
+         <label for="UserID"> Enter User-ID: </label>
+   
+         <input type="text" name="uid" class="form-control" required ngModel #uidcontrol="ngModel"  minlength="6" maxlength="100">
+   
+         <span  style="color:red"  *ngIf="uidcontrol.touched && uidcontrol.invalid">User-ID is Mandatory</span>
+   
+         <span *ngIf="uidcontrol.errors?.['minlength']" style="color: rgb(77, 77, 255);"> User-ID should be at least 6 characters long </span>
+          
+         <span *ngIf="uidcontrol.errors?.['maxlength']" style="color: rgb(77, 77, 255);"> User-ID should not exceed 100 characters </span>
+   
+      </div>
+   
+      <div class="form-group">
+   
+         <label for="UserName"> Enter User-Name: </label>
+   
+         <input type="text" name="uname" class="form-control" required ngModel #unamecontrol="ngModel" minlength="4" maxlength="90">
+   
+         <span  style="color:red"  *ngIf="unamecontrol.touched && unamecontrol.invalid" style="color: rgb(77, 77, 255);"> User Name is Mandatory </span>
+   
+         <span *ngIf="unamecontrol.errors?.['minlength']" style="color: rgb(77, 77, 255);"> User Name should be at least 6 characters long </span>
+          
+         <span *ngIf="unamecontrol.errors?.['maxlength']" style="color: rgb(77, 77, 255);"> User Name should not exceed 100 characters </span>
+   
+      </div>
+   
+      <div class="form-group">
+   
+         <label for=""> Enter Passwords </label>
+   
+         <input type="password" name="upwd" class="form-control" required ngModel #upwdcontrol="ngModel" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,30}$">
+   
+         <span  style="color:red"  *ngIf="upwdcontrol.touched && upwdcontrol.invalid" style="color: rgb(77, 77, 255);"> Password is Mandatory </span>
+
+         <span *ngIf="upwdcontrol.errors?.['pattern']" style="color: rgb(77, 77, 255);">
+            Password must be 8-30 characters long, contain at least 1 uppercase letter, 1 lowercase letter, 1 special character, and 1 number.
+         </span>
+   
+      </div>
+   
+      <div class="form-group">
+   
+         <label for=""> Enter Email: </label>
+   
+         <input type="email" name="uemail" class="form-control" required ngModel #uemailcontrol="ngModel" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3}$">
+   
+         <span  style="color:red"  *ngIf="uemailcontrol.touched && uemailcontrol.invalid" style="color: rgb(77, 77, 255);"> User Email is Mandatory </span>
+   
+         <span *ngIf="uemailcontrol.errors?.['pattern']" style="color: rgb(77, 77, 255);"> Email must have @ and include a valid domain and end. </span>
+   
+      </div>
+   
+      <div class="form-group">
+   
+         <label for=""> Enter Mobile Num: </label>
+   
+         <input type="number" name="uMobile" class="form-control" required ngModel #umobilecontrol="ngModel" pattern="^[0-9]{10}$">
+   
+         <span  style="color:red"  *ngIf="umobilecontrol.touched && umobilecontrol.invalid" style="color: rgb(77, 77, 255);"> User Mobile No. is Mandatory </span>
+   
+         <span *ngIf="umobilecontrol.errors?.['pattern']" style="color: rgb(77, 77, 255);"> Mobile number must be exactly 10 digits </span>
+   
+      </div>
+
+      <div class="form-group">
+
+         <label for=""> Select Gender: </label> <br>
+
+         <input type="radio" name="gender" id="male" value="male" required ngModel #gendercontrol="ngModel"> Male <br>
+
+         <input type="radio" name="gender" id="female" value="female" required ngModel> Female <br>
+
+         <input type="radio" name="gender" id="other" value="other" required ngModel> Other <br>
+
+         <span style="color:red" *ngIf="gendercontrol.touched && gendercontrol.invalid">Please select your gender</span>
+
+      </div>
+
+      <div class="form-group">
+
+         <label for=""> Select Courses: </label><br/>
+
+         <input type="checkbox" name="courses" value="java" ngModel (change)="onCourseChange($event)"> Java <br>
+
+         <input type="checkbox" name="courses" value="python" ngModel (change)="onCourseChange($event)"> Python <br>
+
+         <input type="checkbox" name="courses" value="angular" ngModel (change)="onCourseChange($event)"> Angular <br>
+
+         <input type="checkbox" name="courses" value="reactjs" ngModel (change)="onCourseChange($event)"> ReactJS <br>
+
+         <input type="checkbox" name="courses" value="selenium" ngModel (change)="onCourseChange($event)"> Selenium-Java  <br>
+
+         <input type="checkbox" name="courses" value="docker" ngModel (change)="onCourseChange($event)"> Docker <br>
+
+         <span style="color:red" *ngIf="!validCourses"> Please select at least 2 courses </span>
+      </div>
+
+     
+      <button type="submit" class="btn btn-success" [disabled]="userForm.invalid"> Submit </button>
+   
+   </form>
+
+</fieldset>
+
+

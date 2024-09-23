@@ -1,0 +1,30 @@
+
+<h1>WELCOME TO AppComp</h1>
+
+<!-- <h2 style="color:red">Child data: {{childData}}</h2>
+
+<app-child    [myInput]="parentData"  (eventEmitter)="getChildData($event)"  ></app-child> -->
+
+<h2 style="color:red">Child Data Received:</h2>
+
+<ul>
+
+  <li>ID: {{childData.id}}</li>
+  <li>Name: {{childData.name}}</li>
+  <li>Age: {{childData.age}}</li>
+  <li>Salary: {{childData.salary}}</li>
+
+</ul>
+
+<h2 style="color:green">Parent Data:</h2>
+
+<ul>
+
+  <li>ID: {{parentDataObj.id}}</li>
+  <li>Name: {{parentDataObj.name}}</li>
+  <li>Age: {{parentDataObj.age}}</li>
+  <li>Salary: {{parentDataObj.salary}}</li>
+  
+</ul>
+
+<app-child [myInput]="parentDataObj" (eventEmitter)="getChildData($event)"></app-child>

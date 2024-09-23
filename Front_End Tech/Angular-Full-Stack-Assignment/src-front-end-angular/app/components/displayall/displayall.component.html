@@ -1,0 +1,14 @@
+<p>displayall works!</p>
+
+<div class="container">
+    <table class="table table-primary col-sm-5">
+    
+       <tr><th>Sr No.</th><th>Vehicle Id</th><th>Vehicle Type</th><th>modelName</th><th>purchaseDate</th><th>vehicleNumber</th><th>vehicleAge</th><th>ownerName</th><th>purchaseCost</th><th>currentCost</th></tr> 
+    <tr *ngFor="let ve of veList; index as i"><td>{{i+1}}</td> <td>{{ve.vehicleId}}</td><td>{{ve.vehicleType}}</td><td>{{ve.modelName}}</td> <td>{{ve.purchaseDate}}</td>  <td>{{ve.vehicleNumber}}</td> <td>{{ve.vehicleAge}}</td> <td>{{ve.ownerName}}</td> <td>{{ve.purchaseCost}}</td> <td>{{ve.currentCost}}</td>
+    
+          <td><button type="button" class="btn btn-danger"  (click)="deleteById(ve.vehicleId)" >Delete</button></td>
+    
+    </tr>
+    
+    </table>
+    </div>

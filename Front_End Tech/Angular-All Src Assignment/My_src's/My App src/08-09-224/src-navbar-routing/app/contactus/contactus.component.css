@@ -1,0 +1,9 @@
+h1 {
+    background-color: #FF3434;
+    color: wheat;
+    font-family: 'Poppins', sans-serif;
+}
+
+label, button {
+    font-family: 'Signika Negative', sans-serif;
+}

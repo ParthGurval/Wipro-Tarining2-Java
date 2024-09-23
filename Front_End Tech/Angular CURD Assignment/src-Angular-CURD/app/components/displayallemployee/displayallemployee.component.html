@@ -1,0 +1,35 @@
+<!-- dashboard.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- existing navbar code -->
+  </nav>
+  
+  <router-outlet></router-outlet>
+  
+  <div class="container mt-4" *ngIf="filteredEmployees.length > 0">
+    <h3>Search Results</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Date of Joining</th>
+          <th>Department</th>
+          <th>Experience</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of filteredEmployees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.ename }}</td>
+          <td>{{ employee.age }}</td>
+          <td>{{ employee.salary }}</td>
+          <td>{{ employee.doj | date }}</td>
+          <td>{{ employee.department }}</td>
+          <td>{{ employee.experience }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

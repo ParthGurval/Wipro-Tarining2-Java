@@ -1,0 +1,31 @@
+.navbar-nav .nav-link {
+    position: relative;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #FF6347; /* Change color on hover */
+    text-decoration: none;
+  }
+
+  /* Pop-up effect */
+  .navbar-nav .nav-link::after {
+    content: attr(data-title); /* Display custom data-title attribute */
+    position: absolute;
+    left: 50%;
+    bottom: -25px;
+    transform: translateX(-50%);
+    background-color: #FF6347;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 3px;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+    font-size: 12px;
+  }
+
+  .navbar-nav .nav-link:hover::after {
+    opacity: 1;
+  }

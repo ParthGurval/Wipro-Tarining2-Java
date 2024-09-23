@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <form method="get">
+
+
+        <label for="uname" id="unm">User Name:</label>
+        <input type="text" name="fname" required placeholder="Enter UserName"> <br>
+
+        <label for="Password" id="pwd">Password</label>
+        <input type="password" name="pswd" required placeholder="Enter Password"> <br>
+
+        <label for="Email" id="em">Email</label>
+        <input type="email" name="em" placeholder="Enter Email"> <br>
+
+        <label for="date" id="dt">Date</label>
+        <input type="date" name="dt"> <br>
+
+        <label for="Mob Num" id="numb">Mobile Number</label>
+        <input type="number" name="numb" placeholder="Mobile Number"> <br>
+
+        <label for="Range" id="range">Range</label>
+        <input type="range" name="range"> <br>
+
+        <label for="Attachment" id="filesattach">Attach File</label>
+        <input type="file" name="filesattach"> <br>
+
+        <label for="gender" id="gd"> Gender </label> <br>
+        <input type="radio" name="gender" id="male"> Male <br>
+        <input type="radio" name="gender" id="female"> Female <br>
+        <input type="radio" name="gender" id="other"> Dont want to Specify <br>
+
+        <label for="Coursed" id="course"> Courses </label>
+        <input type="checkbox" name="courses" value="Java"> Java
+        <input type="checkbox" name="courses" value="python"> Python
+        <input type="checkbox" name="courses" value="web"> Html/ Css
+        <input type="checkbox" name="courses" value="aws"> AWS
+        <input type="checkbox" name="courses" value="devops"> DevOps
+        <input type="checkbox" name="courses" value="ai"> AIML
+        <input type="checkbox" name="courses" value="ds"> DS <br>
+
+        <label for="quf"> Qualification </label>
+
+        <Select name="quf">
+            <option value="">--Select--</option>
+            <option value="B.tech">B.Tech</option>
+            <option value="B.E.">B.E.</option>
+            <option value="M.Tech">M.Tech</option>
+            <option value="M.S.">M.S.</option>
+            <option value="M.B.A.">M.B.A.</option>
+        </Select><br>
+
+        <label for="pin_code"> Pin Code </label>
+        <input type="text" name="pin" pattern="[0-9]{6}" title="only 6 digit pin code"><br>
+
+        <label for="ref_id"> Refer Name </label>
+        <input type="text" name="ref" pattern="[A-Za-z0-9]{2,7}[@#$][A-Za-z0-9]" title="2-7 alphanumeric characters followed by @, #, or $, and ending with an alphanumeric character"><br>
+
+        <label for="rmk"> Remark </label>
+        <textarea name="rmark" id="rmk" cols="40" rows="6"></textarea> <br>
+
+        <button type="submit"> Login Now </button>
+
+        <button type="reset"> Reset All </button> <br>
+
+    </form>
+    
+</body>
+</html>

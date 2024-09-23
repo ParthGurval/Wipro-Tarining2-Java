@@ -1,0 +1,32 @@
+<p>student works!</p>
+
+
+
+<h1>Student Template/View</h1>
+
+<h1>StudentComponent</h1>
+
+Student Id: {{sid}}  <br>
+
+Student Name: {{sname}} <br>
+
+<!-- Input Fields for Two-Way Data Binding -->
+<label for="sid">Enter Student ID:</label>
+<input type="number" id="sid" [(ngModel)]="sid"><br><br>
+
+<label for="sname">Enter Student Name:</label>
+<input type="text" id="sname" [(ngModel)]="sname"><br><br>
+
+<!-- Display List of Numbers -->
+<h3>Number List:</h3>
+<ul>
+  <li *ngFor="let num of list">{{ num }}</li>
+</ul>
+
+<!-- Conditional Rendering -->
+<div *ngIf="sid > 100">Student ID is greater than 100.</div>
+
+<!-- Button for Event Handling -->
+<button (click)="resetStudent()">Reset Student</button>
+
+List :   {{list}}

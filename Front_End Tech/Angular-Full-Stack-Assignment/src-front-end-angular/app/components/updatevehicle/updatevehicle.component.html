@@ -1,0 +1,58 @@
+<p>updatevehicle works!</p>
+
+<form #vehicleForm="ngForm" (ngSubmit)="onSubmit(vehicleForm.value)" class="container col-md-4">
+
+    <div class="form-group">
+      <label>Vehicle ID:</label>
+      <input type="number" class="form-control" [(ngModel)]="vehicle.vehicleId" name="vehicleId" (blur)="fetchVehicle(vehicle.vehicleId)">
+    </div>
+  
+    <div *ngIf="vehicleFound">
+      <div class="form-group">
+        <label>Vehicle Type:</label>
+        <input type="text" class="form-control" [(ngModel)]="vehicle.vehicleType" name="vehicleType" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Model Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="vehicle.modelName" name="modelName" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Date Of Purchase:</label>
+        <input type="date" class="form-control" [(ngModel)]="vehicle.purchaseDate" name="purchaseDate" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Vehicle Number:</label>
+        <input type="text" class="form-control" [(ngModel)]="vehicle.vehicleNumber" name="vehicleNumber" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Age of Vehicle:</label>
+        <input type="number" class="form-control" [(ngModel)]="vehicle.vehicleAge" name="vehicleAge" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Owner Name:</label>
+        <input type="text" class="form-control" [(ngModel)]="vehicle.ownerName" name="ownerName" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Purchasing Cost:</label>
+        <input type="number" class="form-control" [(ngModel)]="vehicle.purchaseCost" name="purchaseCost" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Current Market Cost:</label>
+        <input type="number" class="form-control" [(ngModel)]="vehicle.currentCost" name="currentCost" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  
+    <div *ngIf="!vehicleFound" style="color: red;">
+      Vehicle not found. Please check the Vehicle ID.
+    </div>
+  </form>
+  

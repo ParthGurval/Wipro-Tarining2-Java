@@ -1,0 +1,6 @@
+
+<h1>WELCOME TO AppComp</h1>
+
+<h2 style="color:red">Child data: {{childData}}</h2>
+
+<app-child    [myInput]="parentData"  (eventEmitter)="getChildData($event)"  ></app-child>

@@ -1,0 +1,35 @@
+
+<h1>WELCOME TO ANGULAR</h1>
+
+
+
+
+    <div class="pipesCss">
+        <app-pipes></app-pipes>
+    </div>
+
+ Name : {{name | uppercase}}
+
+ <br>
+
+ Salary: {{salary | currency:'INR'}}
+
+ <br>
+
+ Date: {{mydate | date:'full'  | lowercase}}
+
+ <br>
+
+ Number:  {{ 40000 | number:'1.2'}}
+
+ <br>
+
+ Percent:   {{ 01.9 |  percent }}
+
+ <br>
+
+ Json Value:  {{user | json}}
+
+ <br>
+
+ Custom Pipe:  {{ 25 | sqrt:500 | currency:'INR'  }}

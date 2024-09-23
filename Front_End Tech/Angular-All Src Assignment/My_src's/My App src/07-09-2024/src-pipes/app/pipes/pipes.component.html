@@ -1,0 +1,84 @@
+<p>pipes Component works!</p>
+
+<hr>
+
+<div class="data_pipes">
+
+    <h2>Date Pipe Example</h2>
+
+    <p>Current Date: {{ currentDate | date }}</p>
+    <p>Formatted Date: {{ currentDate | date:'fullDate' }}</p>
+    <p>Short Date: {{ currentDate | date:'shortDate' }}</p>
+    <p>Custom Date Format: {{ currentDate | date:'yyyy-MM-dd HH:mm:ss' }}</p>
+
+</div>
+
+<hr>
+
+<div class="curr_pipes">
+
+    <h2>Currency Pipe Example</h2>
+
+    <p>Amount: {{ amount | currency }}</p>
+    <p>Amount (USD): {{ amount | currency:'USD' }}</p>
+    <p>Amount (INR): {{ amount | currency:'INR' }}</p>
+    <p>Amount (KRW): {{ amount | currency:'KRW' }}</p>
+    <p>Amount (EUR): {{ amount | currency:'EUR':'symbol':'1.2-2' }}</p>
+    
+
+
+</div>
+
+<hr>
+
+<div class="perc_pipes">
+
+<h2>Percentage Pipe Example</h2>
+
+<p>Original Value: {{ percentageValue }}</p>
+<p>Converted to Percentage: {{ percentageValue | percent }}</p>
+<p>Percentage with two decimal places: {{ percentageValue | percent:'1.2-2' }}</p>
+
+
+
+</div>
+
+<hr>
+
+<div class="dec_pipes">
+
+    <h2>Decimal Pipe Example</h2>
+
+    <p>Number: {{ number | number }}</p>
+    <p>Number with 2 decimal places: {{ number | number:'1.2-2' }}</p>
+    <p>Number with no decimal places: {{ number | number:'1.0-0' }}</p>
+
+</div>
+
+<hr>
+
+<div class="case_pipes">
+
+    <h2>UpperCase and LowerCase Pipes Example</h2>
+
+    <p>Original Message: {{ message }}</p>
+    <p>Uppercase: {{ message | uppercase }}</p>
+    <p>lowercase: {{ message | lowercase }}</p>
+    
+
+</div>
+
+<hr>
+
+
+<div class="cust_pipes">
+
+    <h2>Custom Reverse Pipe Example</h2>
+
+    <p>Original Message: {{ message }}</p>
+    <p>Reversed Message: {{ message | reverse }}</p>
+
+
+</div>
+
+<hr>

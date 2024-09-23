@@ -1,0 +1,23 @@
+
+<h1 class="appHead1">WELCOME TO The ANGULAR PAGE</h1>
+    <app-controlstructures></app-controlstructures>
+
+<h2>Call update func: {{update()}}</h2>
+
+<h1>Welcome:  {{username}} </h1>  <!--string interpolation from TS to HTML-->
+
+<h1>City: {{city}}</h1>
+
+<form action="">
+
+  User  Name:  <input type="text" name="x"  [value]="username" > <br>
+
+  Two Way DataBinding City:  <input type="text" name="city" [(ngModel)]="city" value="hyd"  > <br>
+
+  <button type="button"  (click)="update()">Click Action</button>
+
+</form> <br>
+
+<img [src]="url" alt="my image" class="f1Img">  <br>
+
+<img src="url_gif" alt="ferrari gif">

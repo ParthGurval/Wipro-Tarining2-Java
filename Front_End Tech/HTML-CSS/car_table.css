@@ -1,0 +1,35 @@
+
+
+/* table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Hover effect for table headers */
+th:hover {
+    background-color: #4CAF50; 
+    color: white;             
+}
+
+/* Hover effect for table data cells */
+td:hover {
+    background-color: #FF9800; 
+    color: white;              
+}
+
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table, th, td {
+    border: 1px solid black;
+}

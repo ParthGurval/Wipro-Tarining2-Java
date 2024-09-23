@@ -1,0 +1,67 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "ename": "Johny Rolls",
+      "age": 47,
+      "salary": 50000,
+      "doj": "2021-04-15",
+      "department": "Engineering",
+      "experience": 5
+    },
+    {
+      "id": 2,
+      "ename": "Jane Smith",
+      "age": 13,
+      "salary": 60000,
+      "doj": "2019-06-23",
+      "department": "Marketing",
+      "experience": 3
+    },
+    {
+      "id": 101,
+      "ename": "Samnan",
+      "age": 23,
+      "salary": 201000000,
+      "doj": "2004-02-20",
+      "department": "CSE",
+      "experience": 10
+    },
+    {
+      "id": 103,
+      "ename": "RamRaj",
+      "age": 20,
+      "salary": 2000000,
+      "doj": "2024-09-02",
+      "department": "Machine",
+      "experience": 3
+    },
+    {
+      "id": 104,
+      "ename": "Ronaldo",
+      "age": 33,
+      "salary": 2014333,
+      "doj": "2020-06-08",
+      "department": "Sports",
+      "experience": 12
+    },
+    {
+      "id": 105,
+      "ename": "Gajanan",
+      "age": 35,
+      "salary": 20000000,
+      "doj": "2024-09-03",
+      "department": "Historical",
+      "experience": 12
+    },
+    {
+      "id": 106,
+      "ename": "Cargio",
+      "age": 30,
+      "salary": 4500000,
+      "doj": "2021-04-02",
+      "department": "Mobile Tech",
+      "experience": 2
+    }
+  ]
+}

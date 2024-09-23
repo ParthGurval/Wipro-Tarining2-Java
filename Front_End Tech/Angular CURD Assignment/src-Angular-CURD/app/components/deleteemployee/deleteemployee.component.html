@@ -1,0 +1,11 @@
+<fieldset style="color: black;">
+    <legend>Delete Employee</legend>
+    <form (ngSubmit)="deleteEmployee()" #deleteForm="ngForm">
+      <div class="form-group">
+        <label for="id">Employee ID:</label>
+        <input type="number" name="id" class="form-control" [(ngModel)]="employeeId" required #idcontrol="ngModel">
+        <span style="color:red" *ngIf="idcontrol.touched && idcontrol.invalid">Employee ID is mandatory</span>
+      </div>
+      <button type="submit" class="btn btn-danger" [disabled]="deleteForm.invalid">Delete Employee</button>
+    </form>
+  </fieldset>

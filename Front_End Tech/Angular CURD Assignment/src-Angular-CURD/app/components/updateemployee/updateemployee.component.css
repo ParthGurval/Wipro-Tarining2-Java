@@ -1,0 +1,70 @@
+
+
+
+
+
+/* General Styles for Fieldset */
+fieldset {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+  }
+  
+  /* Styles for Legend */
+  legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles for Form Group */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  /* Styles for Form Controls */
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Styles for Buttons */
+  .btn {
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Specific Styles for the Search Button */
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  /* Styles for Error Messages */
+  span[style*="color: red;"] {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Flex Alignment for Search Section */
+  .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .me-2 {
+    margin-right: 0.5rem;
+  }
+  
+  /* Button Disable State */
+  [disabled] {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+  
