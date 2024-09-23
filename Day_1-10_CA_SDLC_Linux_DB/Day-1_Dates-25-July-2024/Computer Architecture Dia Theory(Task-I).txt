@@ -1,0 +1,109 @@
+
+1. CPU:
+
+	The Central Processing Unit (CPU) is often referred to as the "brain" of the computer. 
+	It is responsible for executing instructions from programs, performing calculations, and managing data flow within the computer system. 
+	The CPU is has some key components: the Control Unit (CU), the Arithmetic Logic Unit (ALU), and Registers.
+
+	1.1 Control Unit (CU):
+	
+		The Control Unit is the component of the CPU that directs the operation of the processor.
+		The CU retrieves instructions from memory and decodes them to determine the necessary actions.
+		It manages the flow of data between the CPU and other parts of the computer, including memory and input/output devices.
+		It sends control signals to the ALU and other components to execute the instructions.
+		
+	1.2 Arithmetic Logic Unit (ALU):
+	
+		The Arithmetic Logic Unit is the part of the CPU that performs all arithmetic and logical operations.
+		Handles basic arithmetic operations such as addition, subtraction, multiplication, and division.
+		Performs logical operations such as AND, OR, NOT, and XOR.
+		Compares numbers to determine equality, greater than, or less than.
+		
+	1.3 Registers:
+	
+		Registers are small, fast storage locations within the CPU used to hold data temporarily.
+		It is Used to hold temporary data and intermediate results.
+		Includes the Program Counter (PC), which holds the address of the next instruction to execute, and the Instruction Register (IR), which holds the current instruction.
+		It Temporarily holds data and instructions that are currently being used or processed by the CPU.
+		It Provides the CPU with quick access to frequently used values and instructions, improving processing speed.
+		
+2. Input Devices:
+
+	Input devices are peripherals used to provide data and control signals to a computer system.
+	
+	Examples:
+
+		Keyboard: Allows the user to input text and commands.
+		Mouse: A pointing device used to interact with the graphical user interface.
+	
+	Functions:
+
+		Data Entry: Enables users to input raw data into the computer.
+		Command Execution: Allows users to execute commands and control the computer system.
+
+	Connection:
+
+		Input devices send data to the Control Unit (CU), which processes the input and directs it to the appropriate components within the CPU or memory for further action.
+
+3. Output Devices:
+
+	Output devices are peripherals used to communicate the results of data processing carried out by a computer to the user.
+	
+	Examples:
+
+		Monitor: Displays visual output from the computer.
+		Printer: Produces physical copies of digital documents.
+		
+	Functions:
+
+		Data Presentation: Presents processed data to the user in a readable or perceivable form.
+		Feedback: Provides feedback to the user about the operations performed by the computer.
+		
+	Connection:
+
+		The Control Unit (CU) sends processed data from the CPU to output devices, which then convert this data into a human-perceivable format.
+		
+4. Main Memory (RAM): 
+
+	Random Access Memory (RAM) is a type of volatile memory used to store data and instructions temporarily while they are being processed by the CPU.
+	
+	Functions:
+
+		Temporary Storage: Holds data and instructions that the CPU needs while performing tasks.
+		Quick Access: Provides the CPU with fast access to data, enhancing processing speed and efficiency.
+
+	Connection:
+
+		The Control Unit (CU) fetches data and instructions from RAM for processing by the CPU and stores intermediate results back in RAM. 
+		RAM also interfaces with secondary memory to transfer data as needed.
+	
+5. Secondary Memory
+
+	 Secondary memory refers to non-volatile storage used to store data and programs permanently.
+	 
+	 Examples:
+
+		Hard Disk Drives (HDDs): Magnetic storage devices with large capacity.
+		Solid State Drives (SSDs): Faster storage devices using flash memory.
+		Optical Discs: CDs, DVDs, and Blu-ray discs used for media storage.
+		USB Flash Drives: Portable storage devices.
+
+	Functions:
+
+		Permanent Storage: Stores data and programs not currently in use by the CPU.
+		Backup: Provides a means to back up important data for long-term retention.
+		Data Transfer: Facilitates the transfer of large amounts of data between systems.
+		
+	Connection:
+
+	The Control Unit (CU) manages data transfer between RAM and secondary memory, loading programs and data into RAM for processing and saving results back to secondary memory for long-term storage.
+
+Data Connections Process/Flow:
+
+1. Input Devices send data and instructions to the Control Unit (CU).
+2. Control Unit (CU) manages and directs data flow between the CPU, memory, and input/output devices.
+3. Arithmetic Logic Unit (ALU) performs operations on data retrieved from Registers.
+4. Registers hold data temporarily for quick access by the ALU.
+5. Memory (RAM) stores data and instructions for quick access by the CPU.
+6. Secondary Memory (Storage) holds data and programs long-term and transfers data to and from RAM as needed.
+7. Output Devices receive processed data from the CPU via the Control Unit (CU).

@@ -1,0 +1,302 @@
+
+
+
+Day: 7
+Date: 02-Aug-2024
+
+Bash Scripting
+
+	What is Bash Scripting:
+	
+		Bash scripting is writing a series of commands for the Unix-based operating system's shell to execute. The shell, specifically the "Bourne Again Shell" (Bash), interprets these commands.
+
+		In simple words, it's like writing a list of instructions for your computer to follow automatically. 
+		Instead of typing each command manually, you put them in a file (called a script) and run it to perform tasks like file manipulation, program execution, 
+		and text processing quickly and efficiently. Bash scripts can automate repetitive tasks, making them very useful for system administrators and developers.
+		
+	Commands:
+	
+	PS - Determine Shell type
+	date - Display Current Date
+	pwd - Present Working Directory
+	ls - liat all content of current directory
+	echo - prints Output
+	
+	First Line/ Also Known as Shebang
+	
+	#!/bin/bash
+	
+	Commands:
+	nano rpsBatch.shell
+	ls -l
+	chmod 777 rpsBatch.sh 
+	./ rpsBatch.sh 
+	
+	Creating A Variable in Bash
+	
+	Vname = rpsBatch 
+	echo "This is First Variable" $Vname
+	
+	Comapny = $Vname
+	
+	echo "This is Second Variable" $Company
+	
+	
+	-eq : Checks if two numbers are equal.
+-ne : Checks if two numbers are not equal.
+-gt : Checks if the first number is greater than the second number.
+-lt : Checks if the first number is less than the second number.
+
+-ge: Checks if the first number is greater than or equal to the second number
+-le: Checks if the first number is less than or equal to the second number
+
+echo "enter age"
+
+read age
+
+num=1
+
+while [ $num -le $age ]; do
+
+	echo "age is" $num
+	((num+=1))
+done
+
+
+
+In bash and other Unix-like shells, a pipeline is a mechanism that allows you to connect the output of one command directly into the input of another command. This is done using the pipe symbol (|). Pipelines enable you to chain commands together, allowing you to build complex command sequences in a modular and readable way.
+
+Basic Syntax
+The basic syntax for using a pipeline is:
+
+command1 | command2 | command3
+
+Here’s what happens in a pipeline:
+
+command1 produces some output.
+The output of command1 is passed as input to command2.
+The output of command2 is passed as input to command3, and so on.
+Example
+Consider the following example:
+
+cat file.txt | grep "pattern" | sort | uniq
+
+Here's a breakdown of what each command does in the pipeline:
+
+cat file.txt: Displays the content of file.txt.
+grep "pattern": Filters the content to include only lines containing the specified pattern.
+sort: Sorts the filtered lines.
+uniq: Removes duplicate lines from the sorted result.
+The output of each command is passed directly to the next command in the pipeline.
+
+Use Cases
+Pipelines are useful for various tasks, such as:
+
+Filtering and Searching: Use grep to search for patterns in files or command outputs.
+Processing Data: Use awk, sed, or other text processing tools to transform data.
+Sorting and Deduplication: Use sort and uniq to organize and clean data.
+Example with a Pipeline
+Let's say you want to find all unique words in a file and count their occurrences:
+
+cat file.txt | tr ' ' '\n' | sort | uniq -c | sort -nr
+
+cat file.txt: Outputs the content of file.txt.
+tr ' ' '\n': Translates spaces to newlines, effectively turning each word into a separate line.
+sort: Sorts the words alphabetically.
+uniq -c: Counts the occurrences of each unique word.
+sort -nr: Sorts the word counts in numeric reverse order (most frequent words first).
+
+Advanced Pipeline Example
+For more advanced use cases, you might use pipelines to handle more complex data processing:
+
+ps aux | grep 'bash' | awk '{print $1, $11}'
+
+ps aux: Lists all running processes.
+grep 'bash': Filters the list to show only processes related to bash.
+awk '{print $1, $11}': Prints the username and command of each bash process.
+Pipelines are a powerful feature in bash scripting that make it easier to handle and process data by combining simple commands into more complex workflows.
+
+
+
+Exit Code
+
+
+ Short Note on Exit Code in Bash
+
+In Bash, an exit code (or return code) is a numerical value returned by a command or script to indicate its execution status. The exit code is used to determine whether a command was successful or if it encountered an error. By convention:
+- An exit code of `0` indicates that the command was successful.
+- A non-zero exit code indicates that the command encountered an error. Different non-zero values can represent different types of errors.
+
+You can access the exit code of the last executed command using the special variable `$?`. Exit codes are useful for error handling in scripts, allowing you to take appropriate actions based on whether previous commands were successful or not.
+
+ Short Note on the Given Code
+
+bash
+file=/home/rps/desktop/rpstraing2/abc.txt
+
+if [ -f $file ]; then
+  echo "yes"
+fi
+
+cat abc.txt rpsTr.txt | sort
+echo $?
+
+mkdir
+echo $?
+
+
+Explanation:
+
+1. Variable Assignment:
+   bash
+   file=/home/rps/desktop/rpstraing2/abc.txt
+   
+   - This line assigns the file path `/home/rps/desktop/rpstraing2/abc.txt` to the variable `file`.
+
+2. File Existence Check:
+   bash
+   if [ -f $file ]; then
+     echo "yes"
+   fi
+   
+   - This block checks if the file specified by the variable `file` exists and is a regular file.
+   - If the file exists, it prints "yes" to the console.
+
+3. Concatenation and Sorting:
+   bash
+   cat abc.txt rpsTr.txt | sort
+   echo $?
+   
+   - This line concatenates the contents of `abc.txt` and `rpsTr.txt`, sorts the combined output, and prints it to the console.
+   - `echo $?` prints the exit code of the `cat` and `sort` command pipeline. A `0` indicates successful execution, while a non-zero value indicates an error.
+
+4. Directory Creation:
+   bash
+   mkdir
+   echo $?
+   
+   - This line attempts to create a directory using `mkdir`. However, since no directory name is provided, this command will fail.
+   - `echo $?` prints the exit code of the `mkdir` command. In this case, it will likely be a non-zero value indicating an error due to the missing directory name.
+
+
+
+
+AWK
+
+`awk` is a powerful programming language and command-line utility used in Unix-like operating systems for text processing and data extraction. Here’s a brief overview:
+
+### What is `awk`?
+
+- **Text Processing Tool**: `awk` is primarily used to process and analyze text files or streams.
+- **Pattern Matching**: It scans a file line by line, searching for patterns and performing specified actions on lines that match those patterns.
+- **Field-Based Processing**: `awk` works well with columnar data, dividing each line into fields based on a specified delimiter (default is whitespace).
+
+### Basic Syntax
+
+```bash
+awk 'pattern {action}' filename
+```
+
+- **pattern**: A regular expression or condition to match lines.
+- **action**: Commands to execute on matching lines, enclosed in `{}`.
+
+### Common Usage
+
+- **Print Specific Fields**: Extract and display specific columns of data.
+  ```bash
+  awk '{print $1, $3}' file.txt
+  ```
+  This example prints the first and third fields of each line.
+
+- **Pattern Matching**: Perform actions on lines that match a specific pattern.
+  ```bash
+  awk '/error/ {print $0}' log.txt
+  ```
+  This example prints lines containing the word "error".
+
+- **Field Separator**: Use a different delimiter.
+  ```bash
+  awk -F, '{print $1, $2}' file.csv
+  ```
+  This example uses a comma as the field separator for CSV files.
+
+### Example Usage
+
+Suppose you have a file `data.txt` with the following content:
+
+```
+John Doe 30
+Jane Smith 25
+Alice Johnson 28
+```
+
+- To print only the names (first two fields):
+  ```bash
+  awk '{print $1, $2}' data.txt
+  ```
+
+- To print lines where the age is greater than 27:
+  ```bash
+  awk '$3 > 27 {print $0}' data.txt
+  ```
+
+`awk` is versatile and can handle complex text processing tasks with more advanced programming constructs, making it a staple tool for system administrators and developers working with Unix-like systems.
+
+
+
+
+
+Assignment 1: Ensure the script checks if a specific file (e.g., myfile.txt) exists in the current directory. If it exists, print 
+"File exists", otherwise print "File not found".
+
+Assignment 2: Write a script that reads numbers from the user until they enter '0'. The script should also print whether each number is odd or even.
+
+Assignment 3: Create a function that takes a filename as an argument and prints the number of lines in the file. Call this function from your script with different filenames.
+
+Assignment 4: Write a script that creates a directory named TestDir and inside it, creates ten files named File1.txt, File2.txt, ... File10.txt. Each file should contain its filename as its content (e.g., File1.txt contains "File1.txt").
+
+Assignment 5: Modify the script to handle errors, such as the directory already existing or lacking permissions to create files.
+Add a debugging mode that prints additional information when enabled.
+
+Assignment 6: Given a sample log file, write a script using grep to extract all lines containing "ERROR". Use awk to print the date, time, and error message of each extracted line.
+Data Processing with sed
+
+Assignment 7: Create a script that takes a text file and replaces all occurrences of "old_text" with "new_text". Use sed to perform this operation and output the result to a new file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

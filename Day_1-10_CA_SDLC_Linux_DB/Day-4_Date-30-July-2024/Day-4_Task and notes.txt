@@ -1,0 +1,246 @@
+
+
+Day- 4 // 30-07-2024
+
+Agile Values and Principles
+
+4 values of agile
+
+1. Indivisual and interaction over the process and tools
+2. Working software over Comprehensive Documentation
+3. Customer Collabration over contract negotation
+4. Responding to change over a plan
+
+12 Principles of agile
+
+1. Customer satisfaction through early and contineous software delivery.
+2. Accomodate changing requirement throughout the development process.
+3. Frequent delivery of the working software.
+4. collabration between business stakeholder and developers throughout the process.
+5. Support, Trust and Motivate the people involved.
+6. Enable face to face interaction.
+7. Working software is the primary measure for progress.
+8. Agile process to support a consistent developement.
+9. Attention to technical details and design enhance agility.
+10. simplicity.
+11. Self-organizing team encourage great architecture requirement and design.
+12. Regular reflection on how to become more effective.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+********* Task *********
+
+Create requirement for your application:
+
+Project Name: Construction Material Management Software
+
+Project Description:
+
+1. User Roles and Permissions:
+	-> Owner: 
+	-> Manager: 
+	-> Worker: 
+	-> Customer: 
+	
+2. Inventory Management: 
+
+3. Order Management: 
+
+4. Financial Management: 
+
+5. Customer Experience: 
+
+6. Notifications and Reminders: 
+
+7. Invoice: 
+
+
+
+Kanban :
+
+	Kanban is a visual project management method that helps teams visualize their work, limit work-in-progress, and maximize efficiency. 
+	It originated from the Japanese manufacturing industry and is now widely used in various fields, especially in software development.
+	
+Imagine you have a board with three columns: "To Do," "In Progress," and "Done." You write each task on a sticky note and place it in the appropriate column 
+based on its status. As you work on tasks, you move the sticky notes from "To Do" to "In Progress" and finally to "Done." 
+This way, everyone can see what needs to be done, what is being worked on, and what is finished.
+
+
+Initial State
+To Do
+
+Task 1
+Task 2
+Task 3
+Task 4
+Task 5
+In Progress
+
+Task 6
+Task 7
+Task 8
+Done
+
+Task 9
+Task 10
+After Some Progress
+To Do
+
+Task 1
+Task 2
+Task 3
+In Progress
+
+Task 4
+Task 5
+Task 6
+Task 7
+Done
+
+Task 8
+Task 9
+Task 10
+
+This visual representation helps you see the flow of tasks, identify bottlenecks, and manage your workload more effectively.
+
+
+4 Principles of Kanban:
+
+1. Apply Kanaban to your current workflow and process.
+2. Agree to purse incremental change over time.
+3. Respect current process roles and responsibilites.
+4. Encourage act of leadership at all level.
+
+Best Practice of Knaban:
+
+1. Visualize your work.
+2. Limit WIP.
+3. Manage and improve your workflow.
+4. Make process policies explicit.
+5. Implement Feedback loops.
+6. Improve collabratively and evolve.
+
+
+
+
+
+Lean Agile:
+
+	Lean Agile is a method that combines two approaches to make work more efficient and adaptable.
+	
+	Lean focuses on cutting out unnecessary tasks and wasting less time and resources, while Agile emphasizes working in small steps, being flexible to changes, 
+	and regularly improving. 
+	
+	Together, they help teams deliver better results faster and respond quickly to what customers need.
+	
+	Lean agile is a developement method that helps teams identify waste and refing process.
+	
+	It's a guiding mindset that ficilitates efficiency, effectiveness, and contineous improvement.
+	
+Principles
+
+	1. Identify value: Think from the customer point of view.
+	2. Map the value stream: Identify the waste step.
+	3. Create a flow: Make the work effective.
+	4. Establish the pull system: 
+	5. Seek Perfect: remove all the waste we have.
+	
+3 types of deviations:
+
+	Muda: Not adding value to system/ doing it again and again / waste effort
+	Mura: uneveness exp: one person having low work load and one having more work load
+	Muri: Overburden
+	
+	
+In lean agile why waste?
+
+In Lean Agile, waste is considered expensive because it represents activities or processes that do not add value to the customer or the end product.
+
+Why Waste is Expensive:
+
+Wastes Time and Resources: When time and resources are spent on non-essential tasks or inefficient processes, they could have been used to add value or 
+improve the product.
+
+Increases Costs: Waste leads to higher costs because more resources are used without providing corresponding benefits, impacting the overall budget and 
+profitability.
+
+Delays Delivery: Extra work and inefficiencies can slow down the project, causing delays in delivering the product or service to the customer.
+
+Reduces Quality: Focusing on wasteful activities can lead to lower quality outcomes because efforts are diverted from improving or perfecting the product.
+
+In Simple Terms:
+Imagine you’re baking a cake, and you spend a lot of time and ingredients making decorations that no one will see or care about. 
+The time and materials used for those decorations are wasted because they don’t improve the cake itself. 
+In Lean Agile, avoiding such waste means focusing only on what truly benefits the customer and enhances the product.
+
+
+	
+	
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	
+	
+
+1. what is project
+2. what is SDLC
+3. SDLC Phases: Requirement Gathering, Design, Development, Testing, Deployement, Maintenance.
+4. List the application we daily used
+5. Types of application
+6. Flowchart for SDLC phases
+7. SDLC Models
+8. Waterfall model
+9. V-Model
+10. Spiral model
+11. Agile Model
+12. TDD, BDD, FDD
+13. Agile Ceremonies : sprint planning, Daily Standup, Sprint review, Sprint Retrospective, Backlog Refinement
+14. Daily assignments
+15. Agile Values and Principles
+16. JIRA 
+17. JIRA Hands on
+18. Kanban and its principles
+19. Agile vs Kanban
+20. Lean agile
+
+
+
+Assignment 1: Create an infographic illustrating the Test-Driven Development (TDD) process. 
+Highlight steps like writing tests before code, benefits such as bug reduction, and how it fosters software reliability.
+
+Assignment 2: Produce a comparative infographic of TDD, BDD, and FDD methodologies. 
+Illustrate their unique approaches, benefits, and suitability for different software development contexts. Use visuals to enhance understanding.
+
+Assignment 1: Agile Project Planning - Create a one-page project plan for a new software feature using Agile planning techniques. 
+Include backlog items with estimated story points and a prioritized list of user stories.
+
+Assignment 2: Daily Standup Simulation - Write a script for a Daily Standup meeting for a development team working on the software feature from Assignment 
+1. Address a common challenge and incorporate a solution into the communication flow.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

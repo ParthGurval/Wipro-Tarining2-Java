@@ -1,0 +1,385 @@
+
+
+Day_10
+
+Date: 07-08-2024
+
+I have a database for inventoryDb inside that i have tables for 
+
+
+I have a database for inventoryDb inside that i have tables for Customers, Employees, Department,  Orders and Shipmments in Customer i have Customer ID, Name, Address, City, Pincode, Country then i have Employees EmployeeID, fName, lname, Email, City, DepartmentID, Salary then i have Departments with DepartmentID and Department_Name then i have Orders OrderID, CustomerID, EmployeeID, OrderDate, ShippingID then i have Shippments with ShippmentID, OrderID, ShippingDate and ShippingStatus 
+
+create a schema or database for it and dont use auto increment or primary key or foreign key just create simple database.
+
+Assignment 1: Write a SELECT query to retrieve all columns from a 'customers' table, and modify it to return only the customer name and email address for 
+customers in a specific city.
+
+Assignment 2: Craft a query using an INNER JOIN to combine 'orders' and 'customers' tables for customers in a specified region, and a LEFT JOIN to 
+display all customers including those without orders.
+
+Assignment 3: Utilize a subquery to find customers who have placed orders above the average order value, and write a UNION query to combine two SELECT 
+statements with the same number of columns.
+
+Assignment 4: Compose SQL statements to BEGIN a transaction, INSERT a new record into the 'orders' table, COMMIT the transaction, 
+then UPDATE the 'products' table, and ROLLBACK the transaction.
+
+Assignment 5: Begin a transaction, perform a series of INSERTs into 'orders', setting a SAVEPOINT after each, rollback to the second SAVEPOINT, 
+and COMMIT the overall transaction.
+
+Assignment 6: Draft a brief report on the use of transaction logs for data recovery and create a hypothetical scenario where a transaction log is 
+instrumental in data recovery after an unexpected shutdown.
+
+
+
+Joins:
+
+	** SQL Joins: A Simple Guide
+
+	Q. What is a Join?
+		In SQL, a join is used to combine rows from two or more tables based on a related column between them. This allows you to query data that spans multiple tables in a single result set.
+
+	Q. Why Use Joins?
+
+		Combine Data: Retrieve related data from multiple tables.
+		Improve Query Efficiency: Avoid redundancy by organizing data into different tables.
+		Enhanced Data Insights: Enable complex queries and reporting.
+		
+	Types of Joins:
+
+		1. INNER JOIN
+
+		Description: Returns only the rows where there is a match in both tables.
+		
+		Example:
+
+			SELECT employees.name, departments.department FROM employees
+			INNER JOIN departments ON employees.dept_id = departments.id;
+
+		2. LEFT JOIN (or LEFT OUTER JOIN)
+
+		Description: Returns all rows from the left table and matched rows from the right table. If no match, returns NULL for columns from the right table.
+		
+		Example:
+
+		SELECT employees.name, departments.department FROM employees
+		LEFT JOIN departments ON employees.dept_id = departments.id;
+
+		3. RIGHT JOIN (or RIGHT OUTER JOIN)
+
+		Description: Returns all rows from the right table and matched rows from the left table. If no match, returns NULL for columns from the left table.
+		
+		Example:
+
+		SELECT employees.name, departments.department FROM employees
+		RIGHT JOIN departments ON employees.dept_id = departments.id;
+
+		4. FULL JOIN (or FULL OUTER JOIN)
+
+		Description: Returns all rows when there is a match in one of the tables. Rows without a match in either table will have NULLs for columns of the table without a match.
+		
+		Example:
+
+		SELECT employees.name, departments.department FROM employees
+		FULL JOIN departments ON employees.dept_id = departments.id;
+
+		5. CROSS JOIN
+
+		Description: Returns the Cartesian product of the two tables, i.e., all possible combinations of rows.
+		
+		Example:
+
+		SELECT employees.name, departments.department FROM employees
+		CROSS JOIN departments;
+
+	Summary:
+	
+	Joins are essential for querying and combining data from multiple tables in SQL. The type of join used determines how rows are matched and returned in the result set.
+	
+	
+SubQuery:
+	SubQuery is Query which is Nested
+	
+	First Query(Second Query)
+	
+	Second Query also known as Inner Query i.e. Subquery 
+	First Query also known as Main or Outer Query 
+	
+	SELECT * FROM CUSTOMERS WHERE CUSTOMERID IN(SEELECT CUSTOMERID FROM ORDERS);
+	
+	- A subquery (or nested query) is a SQL query embedded within another SQL query. 
+	- It allows you to perform complex operations by using the result of one query as input to another query. 
+	- Subqueries can be used in various clauses like SELECT, WHERE, and FROM.
+	
+	
+	Why Use Subqueries?
+		Simplify Complex Queries: Break down complex queries into simpler, more manageable parts.
+		Enhance Readability: Make queries easier to read and understand by separating different logical components.
+		Perform Advanced Filtering: Retrieve data based on the results of other queries.
+		Calculate Aggregates: Use aggregate results in the main query for filtering or calculations.
+	
+	Types of Subqueries
+Single-Value Subquery: Returns a single value (scalar) and is often used with comparison operators.
+Multi-Value Subquery: Returns multiple values (e.g., a list of IDs) and is typically used with IN or ANY.
+Correlated Subquery: Refers to columns from the outer query and is evaluated for each row processed by the outer query.
+Non-Correlated Subquery: Independent of the outer query; it can be executed independently.
+Examples
+Single-Value Subquery
+
+Scenario: Find employees who earn more than the average salary of all employees.
+Query:
+SELECT name, salary
+FROM Employees
+WHERE salary > (SELECT AVG(salary) FROM Employees);
+
+Multi-Value Subquery
+
+Scenario: List all orders made by a specific customer.
+Query:
+SELECT order_id
+FROM Orders
+WHERE customer_id IN (SELECT customer_id FROM Customers WHERE name = 'John Doe');
+
+Correlated Subquery
+
+Scenario: Find employees who have placed more orders than the average number of orders per employee.
+Query:
+SELECT e.name, COUNT(o.order_id) AS order_count
+FROM Employees e
+JOIN Orders o ON e.employee_id = o.employee_id
+GROUP BY e.name
+HAVING COUNT(o.order_id) > (
+    SELECT AVG(order_count)
+    FROM (
+        SELECT COUNT(order_id) AS order_count
+        FROM Orders
+        GROUP BY employee_id
+    ) AS subquery
+);
+
+
+Non-Correlated Subquery
+
+Scenario: Retrieve products that have never been ordered.
+Query:
+
+SELECT product_name
+FROM Products
+WHERE product_id NOT IN (SELECT product_id FROM OrderDetails);
+
+
+Union, Intersect and EXCEPT
+
+
+	The SQL operations UNION, INTERSECT, and EXCEPT are used to combine results from multiple queries. Here’s a breakdown of each operation with examples based on two tables:
+	
+	Table1
+
+	id	name
+	1	Alice
+	2	Bob
+	3	Charlie
+	
+	Table2
+
+	id	name
+	2	Bob
+	3	Charlie
+	4	David
+	
+	1. UNION
+	The UNION operator combines the result sets of two or more SELECT queries, removing duplicate rows.
+
+	Example:
+		SELECT id, name FROM Table1
+		UNION
+		SELECT id, name FROM Table2;
+
+	Result:
+
+	id	name
+	1	Alice
+	2	Bob
+	3	Charlie
+	4	David
+	
+	2. INTERSECT
+	The INTERSECT operator returns only the rows that are present in both result sets.
+
+	Example:
+		SELECT id, name FROM Table1
+		INTERSECT
+		SELECT id, name FROM Table2;
+
+	Result:
+
+	id	name
+	2	Bob
+	3	Charlie
+	
+	3. EXCEPT (or MINUS in some databases)
+	The EXCEPT operator returns rows from the first result set that are not present in the second result set.
+
+	Example:
+	
+		SELECT id, name FROM Table1
+		EXCEPT
+		SELECT id, name FROM Table2;
+
+	Result:
+
+	id	name
+	1	Alice
+	
+	Notes:
+		Order of Columns: For UNION, INTERSECT, and EXCEPT to work, the SELECT statements must have the same number of columns with compatible data types in the same order.
+		Duplicate Rows: UNION removes duplicates, whereas UNION ALL includes all duplicates. For INTERSECT and EXCEPT, duplicates are handled similarly to UNION.
+		
+	
+	Scalar Functions:
+	
+		1. Concatination:
+		
+			SELECT concat(ID, NAME) AS FULLNAME FROM TABLE1;
+			
+			SELECT length(NAME) AS FULLNAME FROM TABLE1;
+			
+			SELECT substr(NAME, 2, 4) AS FULLNAME FROM TABLE1;
+			
+			SELECT ucase(NAME) AS FULLNAME FROM TABLE1;
+			
+			SELECT lcase(NAME) AS FULLNAME FROM TABLE1;
+			
+			SELECT reverse(NAME) AS FULLNAME FROM TABLE1;
+			
+			SELECT replace(NAME, 's', 't') AS FULLNAME FROM TABLE1;
+			
+			SELECT Current_dtae();
+			
+			select current_date() as date;
+			
+			select current_time() as date;
+			
+			select current_timestamp();
+			
+			
+		Aggrigate Functions:
+		
+		SELECT * FROM EMPLOYEES;
+		
+		1. Select count(id) from Employess;
+		
+		2. Select sum(salary) from Employess;
+		
+		3. Select max(salary) from Employess;
+		
+		4. Select min(salary) from Employess;
+		
+		5. Select avg(id) from Employess;
+		
+		6. Select year (current_date());
+		
+		7. select MONTH (current_date());
+		
+		8. select minute (current_time());
+		
+		9. select hour (current_time());
+		
+	Cases in SQL:
+	
+		SELECT SALARY, 
+		-> CASE 
+		-> WHEN SALARY > 444765 THEN "SALARY IS AVERAGE"
+		-> WHEN SALARY > 24544765 THEN "SALARY IS HIGH" 
+		-> WHEN SALARY < 444765 THEN "SALARY IS LOW"
+		-> ELSE "DEFAULT"
+		-> END
+		-> AS SALARYSTRUCTURE
+		FROM EMPLOYEE;
+
+	IF Function:
+	
+	select if(salary>=44765, "Average", "low") from Employees;
+	
+	select name, if(salary>=44765, "Average", "low") as salarypackage from Employees;
+	
+	->not null check
+	
+	select isnull(NAME, "nodata") from TABLE1;
+	here "NODATA" will be printed where NULL is present in the table
+	
+	select ifnull(NAME, "NODATA") from TABLE1;
+	here "NODATA" will be printed where NULL is present in the table 
+	
+	
+	->Transaction Rollback
+	
+	->Commit and Rollback 
+	
+	START TRANSACTION;
+	
+	INSERT INTO TABLE_name;
+	
+	COMMIT;
+	
+	INSERT INTO TABLE_name;
+	
+	ROLLBACK;
+	(on Drop command Rollback never works)
+	
+	
+	START Transaction;
+	
+	INSERT INTO TABLE_name;
+	
+	SAVEPOINT FIRST;
+	
+	INSERT INTO TABLE_name;
+	
+	INSERT INTO TABLE_name;
+	
+	SAVEPOINT SECOND;
+	
+	INSERT INTO TABLE_name;
+	
+	ROLLBACK TO SECOND;
+	
+	it will remove to data below savepoint second 
+	
+	-> Releasing Savepoint
+	RELEASE SAVEPOINT FIRST;
+	here it is used to remove the savepoint which is not in use as above we use savepoint 2 so savepoint 1 get by default save so the savepoint 1 remails as extra
+	
+	SAVEPOINT K1;
+	
+	SAVEPOINT K2;
+	
+	RELEASE SAVEPONT K1; get executes
+	
+	RELEASE SAVEPOINT K2; SAVEPOINT K2 Does not exist
+	
+	this is because we when release k1 it deletes all upto it 
+
+	->Window Function 
+	->AVG salary calculations
+	
+	select name, id, departmentid, salary, avg(salary) over (partition by departmentid) from Employees;
+
+	select row_number() over (order by salary) as rownumber, id, name, from Employees;
+
+	-->Window Commands:
+	
+	-> Ranking (Same salary will get same rank and arrange is ASC)
+	
+	select rank() over (order by salay) as ranknumber, id, name from Employee;
+	
+	-> Dense rank (Depend on each department like sort rank department wise)
+	
+	select dense_rank() over (partition by departmentid by salary desc) as ranknumber, id, departmentid, name FROM Employee;
+	
+	-> First Value and Last Value 
+	
+		select name, salary, Last_value(name) over (order by salary desc range between unbounded preceding and unbounded following) as lowest from Employees;
+		
+		select name, salary, first_value(name) over (order by salary desc) as highest from Employee;
+		
+		

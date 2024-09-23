@@ -1,0 +1,604 @@
+
+
+
+Date: 29/07/2024
+
+********** Task **********
+
+Think about a application you want to build
+
+
+Q. I want to build an Application for Construction Material Business or Inventory management app
+
+
+
+Q. Which application will you develope and Why
+
+--> I recently got RND about the construction material management business 
+and I got to know that there isnt any simple software for inventory management 
+for the small scale business either they use tally or an software but with complex 
+UI and Structure and if there is any software available with good UI then 
+they have higher prices but not the application upto the mark 
+
+Q. agaenda 
+
+1. create an Inventory manage software which could be used for CMS business, Hardware, tiles, furniture mall etc
+
+2. Connectivity like PC to mobile or clode connectivity 
+3. options for onpremise and cloud storage 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SDLC Phases:
+
+1. Requirement Gathering: This initial phase involves collecting and documenting what the stakeholders need from the software. 
+   It includes understanding the problem, defining objectives, and specifying detailed requirements.
+	set of lines that is going to describe your application
+	Client -- BA, word, excel, project management tool -- Azure, TFS, JIRA, ALM
+
+2. Design: Based on the gathered requirements, the design phase outlines how the software will be structured. This includes architectural design, data models, 
+           user interfaces, and system components, providing a blueprint for development.
+
+3. Implementation: In this phase, the actual coding takes place. Developers translate design specifications into functional software, 
+				   writing and integrating code to build the system.
+
+4. Testing: Once the software is developed, it undergoes rigorous testing to identify and fix bugs and ensure it meets the requirements. 
+   This phase verifies that the software works correctly and is free from critical issues.
+
+5. Deployment: After testing, the software is released to users. Deployment involves installing and configuring the software in a live environment, 
+			   ensuring it is operational and accessible to its intended audience.
+
+6. Maintenance: Post-deployment, the software enters the maintenance phase. This involves ongoing support, updating the software to fix issues, 
+				improve performance, and adapt to changing requirements or environments. 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+********** Task **********
+
+Application We use daily:
+
+1. Mobile: WhatsApp, Instagram, Amazon, SuperCell(COC), Netflix, AmazonPrime, Disney+Hotstar, LinkedIn, Notes, Youtube, Telegram, Spotify, Calls and Messages, phone pay, google pay
+	
+	Chatting/Social Application: WhatsApp, Instagram, LinkedIn,
+	Education Application: Udemy 
+	shopping Application: Amazon,
+	Gaming Application: SuperCell(COC)
+	Bank/ Payment Application: phone pay, google pay
+	Entertaitemtn Application: Netflix, AmazonPrime, Disney+Hotstar, Youtube, Telegram, Spotify,
+	other application: Notes, Calls and Messages,
+
+2. Desktop: Teams, VS-Code, Chrome, NotePad++, WhatsApp_Desktop, Android Studio, RiotGames
+
+
+Types of application: we consider while creating a project like which catagoery it lies under
+
+Chatting Applications: These applications facilitate real-time communication between users. Examples include WhatsApp, Telegram, and Signal.
+
+Entertainment Applications: Designed to provide leisure and recreational activities, these apps offer content such as movies, music, and games. 
+Examples include Netflix, Spotify, and YouTube.
+
+Government Applications: These applications serve public administration and citizen services, helping with tasks like filing taxes or accessing public records. 
+Examples include IRS e-File, DMV online services, and e-Government portals.
+
+Education Applications: These apps support learning and educational activities, ranging from online courses to interactive learning tools. 
+Examples include Khan Academy, Duolingo, and Coursera.
+
+Social Media Applications: Used for social networking and sharing content, these apps enable users to connect and interact online. 
+Examples include Facebook, Instagram, and Twitter.
+
+Banking Applications: These apps allow users to manage their bank accounts, perform transactions, and monitor financial activities. 
+Examples include Chase Mobile, Bank of America, and Revolut.
+
+Finance Applications: Focused on personal finance management, these apps help users with budgeting, investment tracking, and expense management. 
+Examples include Mint, YNAB (You Need A Budget), and Robinhood.
+
+Insurance Applications: These apps facilitate the management of insurance policies, claims, and customer service. 
+Examples include GEICO Mobile, State Farm, and Progressive.
+
+E-Commerce Applications: Designed for buying and selling goods and services online, these apps provide a platform for online shopping. 
+Examples include Amazon, eBay, and Alibaba.
+
+Gaming Applications: These apps are designed for entertainment through interactive gaming experiences. 
+Examples include Fortnite, Candy Crush Saga, and PUBG Mobile.
+
+Travel Applications: These apps assist with planning, booking, and managing travel arrangements. 
+Examples include Expedia, TripAdvisor, and Google Maps.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+********** Task **********
+
+Create a flowchart for SDLC
+
+Application name : Construction Material Management Software
+
+Type of Application: E-Commerce or Inventory Management
+
+Phases of SDLC
+
+0. Planning Phases: 
+
+	Project goal and objectives are defined 
+	
+	who is involved:  Senior Developers, Project Manager, Client
+	
+
+1. Requirement Gathering: 
+
+	This initial phase involves collecting and documenting what the stakeholders need from the software. 
+	
+	who is involed in project:  BA, Project Manager, Client 
+	
+	It includes understanding the problem, defining objectives, and specifying detailed requirements.
+
+2. Design: 
+
+	Based on the gathered requirements, the design phase outlines how the software will be structured. 
+	
+	who is involved: UIUX Developers, Front End Developers, Project Manager, Client
+	
+	This includes architectural design, data models, user interfaces, and system components, providing a blueprint for development.
+
+3. Implementation: 
+
+	In this phase, the actual coding takes place also we design the data base and backend Logic. 
+	
+	who is involed: Back End Developers, Database Administrator, Project Manager
+	
+	Developers translate design specifications into functional software, writing and integrating code to build the system.
+
+4. Testing: 
+
+   This phase verifies that the software works correctly and is free from critical issues.
+   
+   who is involed: Quality Analysist, Project Manager
+   
+   Once the software is developed, it undergoes rigorous testing to identify and fix bugs and ensure it meets the requirements. 
+
+5. Deployment: 
+	
+	After testing, the software is released to users. 
+	
+	who is involed: DevOps engineers System Administrator, Project Manager, client 
+	
+	Deployment involves installing and configuring the software in a live environment, ensuring it is operational and accessible to its intended audience.
+
+6. Maintenance: 
+
+	Post-deployment, the software enters the maintenance phase.
+
+	who is involed: Support Enginers, FE/ BE Enginers, Project Manager
+	
+	This involves ongoing support, updating the software to fix issues, improve performance, and adapt to changing requirements or environments. 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SDLC Models
+					
+1. Waterfall
+2. V Model
+3. Sprial
+4. Agile
+
+TDD: Test Driven Development 
+BDD: Behavioural Driven Development
+FDD: Feature Driven Development
+
+
+1. Waterfall Model: 
+
+	The Waterfall model is a linear and sequential approach where each phase of the Software Development Life Cycle (SDLC) must be completed before the next phase 
+	begins. It typically includes requirements gathering, design, implementation, testing, deployment, and maintenance. 
+	This model is straightforward and easy to manage but lacks flexibility, making it less ideal for projects where requirements might evolve.
+
+	Example: Developing a traditional enterprise application with well-defined requirements and minimal changes expected.
+	
+	If you need to add few features
+
+	Time taking process
+	
+	Advantage: well documented 
+	
+2. V Model:
+
+	The V-Model extends the Waterfall model by emphasizing the verification and validation processes. 
+	It’s represented as a "V" shape, where each development phase has a corresponding testing phase. 
+	The model stresses the importance of validating and verifying the product at each stage, ensuring that errors are detected early.
+
+	Example: Systems that require rigorous validation, such as safety-critical applications in aerospace or medical fields.
+	
+	Verification and validation Model
+	
+	1. List of Requirements -- testing documents
+
+3. Sprial Model:
+
+	The Spiral model combines iterative development with systematic aspects of the Waterfall model. 
+	It involves repetitive cycles or "spirals" of planning, risk analysis, engineering, testing, and evaluation. 
+	Each iteration results in a refined prototype, allowing for continuous improvement and adaptation based on feedback.
+
+	Example: Large and complex projects where requirements are expected to evolve, such as large-scale software systems or custom software solutions.
+	
+4. Agile Model:
+
+	The Agile model promotes iterative development and flexibility, focusing on delivering small, incremental updates. 
+	It emphasizes collaboration, customer feedback, and rapid delivery of functional software. Agile methodologies, such as Scrum or Kanban, 
+	facilitate continuous improvement and adaptability.
+
+	Example: Projects with changing requirements or where rapid delivery of features is critical, such as web development or startup products.
+	
+	
+5. TDD:
+
+	Also known as Test Driven Development
+	TDD is a development approach where tests are written before the code. 
+	The process involves creating a test, writing code to pass the test, and then refactoring the code. 
+	This ensures that code meets the required functionality from the beginning and helps catch bugs early.
+
+Example: Building a new feature where you first write unit tests for its expected behavior, then develop the feature code to pass these tests.
+
+
+6. BDD:
+	
+	Also known as Behavior Driven Development
+	BDD extends TDD by focusing on the behavior of the application from the user’s perspective. 
+	It involves writing scenarios in plain language that describe how the application should behave in different situations. 
+	BDD encourages collaboration between developers, testers, and non-technical stakeholders.
+
+Example: Creating scenarios in Gherkin language for a feature in an e-commerce application, such as "Given a user is logged in, when they add an item to the cart, then the item should appear in the cart."
+
+
+7. FDD:
+
+	Also known as Feature Driven Development
+	FDD is a model-driven, short-iteration process where the focus is on designing and building features. 
+	It involves developing a feature list and then incrementally designing, building, and testing features. 
+	FDD emphasizes a structured approach with regular, deliverable iterations.
+
+Example: Developing a customer management system where each feature (like user registration, profile management, etc.) is developed and delivered in incremental phases.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+********** Task **********
+
+1. Waterfall Model:
+
+Definition:
+
+The Waterfall model is a SDLC software development process where progress flows in one direction—downwards like a waterfall—through distinct phases.
+
+When We Use It:
+
+	a. When project requirements are well-known and unlikely to change anthing in req.
+	b. For projects with clearly defined stages and minimal scope changes.
+	
+Why We Use It:
+
+	a. It provides a structured and straightforward approach.
+	b. It works well for smaller projects or projects with fixed requirements.
+	
+Where We Use It:
+
+	a. In projects where changes are minimal or non-existent after the initial planning phase.
+	b. Suitable for industries with rigid standards, like government or manufacturing.
+	
+Real-Life Example:
+
+we use this approach while Developing a ERP system with fixed requirements and clear goals.
+
+Flowchart:
+	
+	Requirements → Design → Implementation → Testing → Deployment → Maintenance
+	
+	
+2. V-Model:
+
+Definition:
+
+	The V Model is nothing but Validation and Verification Model
+	The V-Model is same as of the Waterfall model that emphasizes testing. 
+	In this Each SDLC phase corresponds to a testing phase.
+
+When We Use It:
+
+	a. When a project requires high reliability and thorough testing.
+	b. For projects where the requirements are well-defined from the beginning.
+	
+Why We Use It:
+
+	a. It ensures that each phase of development is validated and verified.
+	b. It improves the quality and reliability of the final product by catching errors early.
+	
+Where We Use It:
+
+	a. We use this method In projects that involve critical systems where validation and verification are crucial, like medical devices or 
+		safety-critical systems.
+
+Real-Life Example:
+
+Developing a software system for a medical device, where each development stage (requirements, design, implementation) is closely linked with corresponding 
+testing stages.
+
+Flowchart:
+
+Requirements → Design → Implementation
+           |       |         |
+           Test    Test    Test
+           |       |        |
+Validation → Verification → Integration
+
+
+
+3. Spiral Model:
+
+Definition:
+
+The Spiral model is a way to develop software that involves repeating a series of steps in a loop, or "spiral," to gradually build and improve the software. 
+
+When We Use It:
+
+	a. For large, complex projects with evolving requirements.
+	b. When there is a need for continuous refinement and risk assessment.
+	
+Why We Use It:
+
+	a. It allows for iterative development and early detection of potential risks.
+	b. It supports evolving requirements and frequent adjustments.
+	
+Where We Use It:
+
+	we use this in complex software development projects where requirements may change time to time, such as custom software development or large-scale systems.
+
+Real-Life Example:
+
+Developing a custom CRM (Customer Relationship Management) system where requirements evolve based on user feedback during multiple iterations.
+
+Flowchart
+
+1. Planning → 2. Risk Analysis → 3. Engineering → 4. Testing
+   |                                           |
+   ─────────────────────────────────────────────
+   
+   
+   
+
+4. Agile Model:
+
+Definition:
+
+	The Agile model is a way of developing software where you work in small, repeated cycles. 
+	Each cycle produces a piece of working software, and you adapt and improve the product based on feedback.
+
+When We Use It:
+
+	a. Changing Requirements: When the needs of the project are likely to change often.
+	b. Fast Delivery: When it’s important to deliver working software quickly and adjust as needed.
+	
+Why We Use It:
+
+	a. Flexibility: It allows you to make changes easily as you go along.
+	b. Customer Satisfaction: It helps ensure the final product meets the needs of users because you get their feedback regularly and make adjustments.
+	
+Where We Use It:
+
+Dynamic Projects: Like creating websites, mobile apps, or new tech products where requirements can change based on user needs and market trends.
+
+Real-Life Example:
+
+Developing a new mobile app where features are released incrementally, and feedback from users is used to guide future development.
+
+Flowchart
+
+Plan → Design → Develop → Test → Review → Plan (next iteration)
+  |                                |
+  ─────────────────────────────────
+
+
+
+5. TDD:
+
+	It's also known as Test Driven Development 
+	TDD is a development approach where tests are written before the actual code. 
+	The process involves creating tests, writing code to pass the tests, and then refactoring.
+
+When We Use It:
+
+	a. When the focus is on ensuring code correctness from the start.
+	b. In scenarios where code reliability and robustness are critical.
+
+Why We Use It:
+
+	a. It ensures that the code meets its requirements and functions correctly from the outset.
+	b. It helps identify and fix issues early in the development process.
+	
+Where We Use It:
+
+	In software projects where quality and correctness are crucial, such as financial systems or security applications.
+
+Real-Life Example:
+
+Writing tests for a new API endpoint before developing the endpoint code itself.
+
+Flowchart:
+
+	Write Test → Write Code → Run Test → Refactor Code → Repeat
+
+
+6. BDD
+
+	It's also known as Behavior Driven Development
+	BDD focuses on describing the behavior of the application from the user's perspective using natural language scenarios.
+	
+When We Use It:
+
+	a. When collaboration between developers, testers, and non-technical stakeholders is needed.
+	b. For projects where understanding and defining the user behavior is essential.
+
+Why We Use It:
+
+	a. It promotes clear communication and shared understanding of requirements.
+	b. It helps ensure that development aligns with user expectations and behaviors.
+
+Where We Use It:
+
+	In projects where user interactions and behaviors are critical, such as customer-facing applications or interactive features.
+
+Real-Life Example:
+
+Writing scenarios for an e-commerce site to describe how users interact with product search and checkout features.
+
+Flowchart:
+
+	Define Behavior → Write Scenarios → Develop Code → Run Scenarios → Refactor → Repeat
+
+
+7. FDD:
+
+	It's also known as Feature Driven Development
+	
+	FDD is a model-driven approach that focuses on delivering features in short, incremental iterations. 
+	int this Each feature is designed, built, and tested separately.
+
+When We Use It:
+
+	a. For projects with a clear set of features that can be developed incrementally.
+	b. When a structured approach to feature delivery is desired.
+
+Why We Use It:
+
+	a. It provides a clear and structured approach to developing and delivering features.
+	b. It supports incremental progress and early delivery of usable features.
+
+Where We Use It:
+
+	In projects with well-defined feature sets, such as CRM systems or software with multiple distinct functionalities.
+	
+Real-Life Example:
+
+Developing a project management tool where each feature (task management, reporting, user management) is delivered in incremental releases.
+
+Flowchart:
+
+ Feature List → Design Feature → Build Feature → Test Feature → Deliver Feature → Next Feature
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Agile Ceremonies:
+
+1. Sprint Planning: Plan what to do in the next sprint.
+2. Daily Stand-up: Daily check-in on progress and obstacles.
+3. Sprint Review: Demonstrate and review completed work.
+4. Sprint Retrospective: Reflect on the sprint and plan improvements.
+5. Backlog Refinement: Prepare and prioritize the product backlog.
+
+
+1. Sprint Planning
+
+Purpose: 
+
+To plan the work for the upcoming sprint (a set period, typically 1-4 weeks, during which a specific set of tasks is completed).
+
+Key Activities:
+- Define the sprint goal.
+- Select and prioritize backlog items (user stories, tasks) to work on during the sprint.
+- Break down selected items into tasks and estimate effort required.
+
+Frequency: 
+Occurs at the beginning of each sprint.
+
+Participants:
+- Product Owner
+- Scrum Master
+- Development Team
+
+
+
+2. Daily Stand-up (Daily Scrum)
+
+Purpose:
+To synchronize the team’s activities and create a plan for the next 24 hours.
+
+Key Activities:
+- Each team member answers three questions:
+  - What did I do yesterday?
+  - What will I do today?
+  - Are there any impediments or issues?
+
+Frequency: 
+Daily, usually lasting 15 minutes.
+
+Participants:
+- Development Team
+- Scrum Master (optional)
+- Product Owner (optional)
+
+3. Sprint Review
+
+Purpose:
+To review and demonstrate what was completed during the sprint and gather feedback.
+
+Key Activities:
+- Present the completed work to stakeholders.
+- Collect feedback and discuss what went well and what didn’t.
+- Adjust the product backlog based on feedback.
+
+Frequency: 
+At the end of each sprint.
+
+Participants:
+- Product Owner
+- Development Team
+- Scrum Master
+- Stakeholders (e.g., customers, business representatives)
+
+4. Sprint Retrospective
+
+Purpose:
+To reflect on the sprint process and identify improvements for the next sprint.
+
+Key Activities:
+- Discuss what went well, what didn’t, and what could be improved.
+- Develop action items to address issues and enhance team performance.
+
+Frequency: 
+At the end of each sprint, usually after the Sprint Review.
+
+Participants:
+- Development Team
+- Scrum Master
+- Product Owner (optional)
+
+5. Backlog Refinement (Grooming)
+
+Purpose:
+To review, revise, and prioritize the product backlog, ensuring it is well-prepared for future sprints.
+
+Key Activities:
+- Clarify user stories, tasks, and their acceptance criteria.
+- Re-prioritize backlog items based on current needs and feedback.
+- Break down large items into smaller, more manageable pieces.
+
+Frequency: 
+Occurs regularly, often mid-sprint.
+
+Participants:
+- Product Owner
+- Scrum Master
+- Development Team
+
+These ceremonies help Agile teams stay organized, focused, and adaptable, ensuring continuous improvement and effective collaboration 
+throughout the development process.
+
+
+
+
+
+
+
+
+
+

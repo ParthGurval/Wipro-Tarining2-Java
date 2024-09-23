@@ -1,0 +1,329 @@
+
+
+
+Day_9 
+Date: 06-Aug-2024
+
+
+Database Commands:
+
+	sudo -i
+	pwd
+	mysql --version
+	mysql 
+	SHOW DATABASES;
+	-- Single line Comment
+	/* Multi-Line Comment */
+	USE mysql;
+	SHOW TABLES;
+	
+	CREATE DATABASE demoDB;
+	SHOW DATABASES;
+	DROP DATABASE oldDB;
+	USE demoDB;
+	SHOW TABLES;
+	CREATE TABLE signUP(regID int, UserName varchar(255), Password varchar(255), Age int, Gender char(12), Email varchar(255), city varchar(255));
+	SELECT * FROM signUP;
+	
+	ALTER TABLE signUP ADD Description int;
+	ALTER TABLE signUP MODIFY COLUMN Description varchar(255);
+	ALTER TABLE signUP DROP COLUMN Description;
+	
+	SHOW FIELDS FROM signUP;
+	
+	SHOW ENGINES;
+	
+	INSERT INTO SignUP(regID, UserName, Password, Age, Gender, Email, city) VALUES (1, 'Parth', 'PKG1020', 24, 'Male', 'Parth@gmail.com', 'Kolhapur');
+	
+	INSERT INTO SignUP(regID, UserName, Password, Age, Gender, Email, city) VALUES (2, 'Karishma', 'KPG1020', 24, 'Female', 'Karishma@gmail.com', 'Kolhapur'), (3, 'Jerry', 'Jerry1122', 10, 'Male', 'Jerry@gmail.com', 'Kolhapur');
+	
+	INSERT INTO SignUP(regID, UserName, Password, Age, Gender, Email, city) VALUES (4, 'Gunesh', 'Gunesh8888', 28, 'Male', 'Gunesh@gmail.com', 'Satara'),(5, 'Priti', 'Priti8888', 27, 'Female', 'Priti@gmail.com', 'Solapur'), 
+	(6, 'Siwit', 'Siwit7690', 32, 'Male', 'Siwit@gmail.com', 'Pune'), (7, 'Anika', 'Anika1234', 30, 'Female', 'Anika@gmail.com', 'Mumbai'), (8, 'Harsh', 'Harsh4609', 35, 'Male', 'Harsh@gmail.com', 'Pune'), (9, 'Rushali', 'Rushali7985', 33, 'Female', 'Rushali@gmail.com', 'Thane');
+
+	INSERT INTO signUP(regID, UserName, Password, city) VALUES (14, 'Kevin', 'Kevin11', 'Katraj'), (19, 'Gwen', 'Gwen@123', 'Thane');
+
+	UPDATE signUP SET City='Pimpri-Chinchwad' WHERE ID = '14';
+	
+	UPDATE signUP SET City='Pimpri-Chinchwad', Password='Kevin@11' WHERE ID = '14';
+	
+	UPDATE signUP SET City='Mumbai' WHERE City='Thane';
+	
+	--> Delete One Row
+	DELETE FROM signUP WHERE ID='14';
+	
+	--> Delete all Rows
+	DELETE FROM signUP;
+	
+	--> Delete Multiple Rows
+	DELETE FROM signUP WHERE City='Pimpri-Chinchwad';
+	
+	--> All Columns all rows 
+	SELECT * FROM Table_Name;
+	
+	--> Specific Colums all rows 
+	SELECT ID, CITY FROM Table_Name;
+	
+	--> Based on Condition:
+	SELECT FROM Table_Name WHERE City='Mumbai';
+	
+	SELECT FROM Table_Name WHERE AGE<=30;
+	
+	<> sign is used as !=
+	
+	SELECT * FROM Table_Name WHERE AGE BETWEEN 20 AND 30;
+
+	SELECT * FROM Table_Name WHERE NAME LIKE 'AN%';
+	
+		here AN% means word starting from AN 
+		then %AN means Ends with AN 
+		then %AN% means AN in middle
+		then AN_ means word with start AN and length is 3 same will be for A_N and _AN like wise
+		
+	SELECT * FROM Table_Name WHERE City IN ('Chennai', 'Mumbai');
+	
+	--> Order by:
+	SELECT * FROM signUP ORDER BY NAME ASC/DESC;
+	
+	--> Group by:
+	SELECT COUNT(regID), City FROM signUP GROUP BY City ORDER BY City;
+	
+	--> Having Clause:
+	SELECT COUNT(regID), City FROM signUP GROUP BY HAVING COUNT(regID)<2;
+	
+	
+	SELECT User, host FROM mysql.user 
+	
+	CREATE USER '<Uer>'@'<Host>'
+	
+	CREATE USER '<User>'@'<Host>' Identified by '<Password>';
+	
+	ALTER USER '<User>'@'<Host>' Identified by '<New_Password>';
+	
+	SYSTEM mysql -u UserName
+	
+	SYSTEM mysql -u UserName -p
+	
+	DROP User '<User>'@'<Host>';
+	
+	SHOW GRANTS FOR '<User>'@'<Host>';
+	
+	Grant ACCESS: (in *.* = First star -> all DB's and Second Star -> Tables)
+	
+	GRANT ALL ON *.* TO '<User>'@'<Host>'; -- Give permission to all DB's
+	
+	GRANT SELECT, INSERT ON *.* TO '<User>'@'<Host>'; -- Only for Select and Insert 
+	
+	GRANT SELECT, INSERT ON myDB(Db name) TO '<User>'@'<Host>';
+	
+	SYSTEM mysql -u username
+	
+	SELECT  USER FROM mysql.user;
+	
+	and for root is: SYSTEM mysql -u root;
+	
+	
+	
+What is indexes?
+
+	An index in a database is a data structure that improves the speed of data retrieval operations on a table. Think of it as a sorted list that allows quick access to the data rows in a table, similar to an index in a book that helps you quickly find information.
+
+	### Key Points About Indexes:
+
+	1. Purpose: 
+	   - The main purpose of an index is to enhance the performance of database queries by reducing the amount of data that needs to be scanned.
+	   - Indexes help to quickly locate and access the data without having to search every row in a table every time a query is run.
+
+	2. Structure:
+	   - Indexes are typically implemented using data structures like B-trees or hash tables.
+	   - They store the values of specified columns in a sorted order, along with pointers to the corresponding rows in the table.
+
+	3. Types of Indexes:
+	   - Primary Index: Automatically created when a primary key is defined. It ensures the uniqueness of the key and allows fast access to records.
+	   - Unique Index: Ensures that the indexed column(s) contain unique values.
+	   - Non-Unique Index: Allows for faster searches but does not enforce uniqueness.
+	   - Composite Index: Involves multiple columns and is used to optimize queries involving multiple columns in the WHERE clause.
+
+	4. Benefits:
+	   - Speed: Significantly speeds up the retrieval of data by reducing the number of disk I/O operations.
+	   - Efficiency: Improves the efficiency of data retrieval, especially for large datasets.
+
+	5. Trade-offs:
+	   - Storage: Indexes consume additional storage space.
+	   - Maintenance: They can slow down write operations (INSERT, UPDATE, DELETE) because the index also needs to be updated whenever the data in the indexed columns changes.
+
+	### Example:
+
+	Consider a "Students" table with columns "StudentID", "Name", and "Age". Without an index, a query to find a student by name would require scanning each row of the table (a full table scan). By creating an index on the "Name" column, the database can quickly locate the matching rows.
+
+		CREATE INDEX idx_name ON Students(Name);
+
+	After creating this index, a query like:
+
+		SELECT * FROM Students WHERE Name = 'John Doe';
+
+	will be much faster because the database can use the index to directly locate the rows where the "Name" is 'John Doe' instead of scanning the entire table.
+	
+	
+	
+Data Type in SQL
+
+### Data Types in SQL
+
+	SQL data types define the kind of data that can be stored in a column of a table. They help ensure that the data entered is accurate and conforms to the expected format. Here’s a brief overview of common SQL data types:
+
+	1. Numeric Data Types
+	   - INT (INTEGER): Used for integer values.
+		
+		 INT, INTEGER
+		
+	   - FLOAT, REAL: Used for floating-point numbers (decimal values).
+		 
+		 FLOAT, REAL
+		 
+	   - DECIMAL, NUMERIC: Used for fixed-point numbers, where precision and scale can be defined.
+		 
+		 DECIMAL(10, 2), NUMERIC(10, 2)
+		 
+
+	2. Character String Data Types
+	   - CHAR(n): Fixed-length character string, where `n` defines the length.
+		 
+		 CHAR(10)
+		 
+	   - VARCHAR(n): Variable-length character string, where `n` defines the maximum length.
+		 
+		 VARCHAR(255)
+		 
+	   - TEXT: Used for large text blocks (not supported by all SQL databases).
+		 
+		 TEXT
+		 
+
+	3. Binary Data Types
+	   - BINARY: Fixed-length binary data.
+		 
+		 BINARY(10)
+		 
+	   - VARBINARY: Variable-length binary data.
+		 
+		 VARBINARY(255)
+		 
+	   - BLOB: Used for Binary Large Objects, storing large binary data such as images or files.
+		 
+		 BLOB
+		 
+
+	4. Date and Time Data Types
+	   - DATE: Stores dates in the format `YYYY-MM-DD`.
+		 
+		 DATE
+		 
+	   - TIME: Stores time in the format `HH:MI:SS`.
+		 
+		 TIME
+		 
+	   - DATETIME: Stores date and time in the format `YYYY-MM-DD HH:MI:SS`.
+		 
+		 DATETIME
+		 
+	   - TIMESTAMP: Stores a unique timestamp value, typically including date and time, often used for versioning.
+		 
+		 TIMESTAMP
+		 
+
+	5. Boolean Data Type
+	   - BOOLEAN: Stores `TRUE` or `FALSE` values (not supported by all SQL databases).
+		 
+		 BOOLEAN
+		 
+
+	6. Miscellaneous Data Types
+	   - ENUM: Stores a predefined set of values.
+		 
+		 ENUM('small', 'medium', 'large')
+		 
+	   - SET: Stores multiple predefined values.
+		 
+		 SET('a', 'b', 'c')
+		 
+
+### Example
+
+	Creating a table with various data types:
+
+	CREATE TABLE SampleTable (
+		ID INT PRIMARY KEY,
+		Name VARCHAR(100),
+		BirthDate DATE,
+		Salary DECIMAL(10, 2),
+		ProfileImage BLOB,
+		IsActive BOOLEAN
+	);
+
+
+### Summary
+
+	SQL data types define the nature of the data that can be stored in a column, ensuring that data is stored in a structured and efficient manner. They are crucial for maintaining data integrity and optimizing database performance.
+	
+	
+
+
+### Database Engines: Overview
+
+Database Engines are the core components of a database management system (DBMS) responsible for handling data storage, retrieval, and manipulation. They determine how data is stored, organized, and accessed. Different engines offer varying features and performance characteristics, catering to diverse use cases and requirements.
+
+Why We Use Database Engines:
+1. Performance Optimization: Different engines are optimized for specific types of operations, such as transactions or read-heavy workloads.
+2. Data Integrity: Some engines provide features like ACID (Atomicity, Consistency, Isolation, Durability) compliance for reliable transactions.
+3. Storage Formats: Different engines use varied storage formats, affecting data retrieval speed and space efficiency.
+4. Feature Set: Engines offer distinct capabilities like full-text search or spatial indexing.
+
+Common Database Engines:
+
+1. InnoDB:
+   - Features: Supports ACID transactions, row-level locking, foreign keys, and crash recovery.
+   - Use Case: Ideal for applications requiring high reliability and complex transactions.
+
+2. MyISAM:
+   - Features: Offers fast read operations and table-level locking but lacks support for transactions and foreign keys.
+   - Use Case: Suited for read-heavy applications with less need for transactional integrity.
+
+3. MEMORY:
+   - Features: Stores data in RAM, providing extremely fast access times. Data is lost when the server restarts.
+   - Use Case: Useful for temporary data storage or caching where data persistence is not required.
+
+4. CSV:
+   - Features: Stores data in plain-text CSV files, making it easy to export and import data.
+   - Use Case: Suitable for simple data storage needs and easy integration with other systems, but lacks advanced features like indexing.
+
+5. ARCHIVE:
+   - Features: Designed for storing large amounts of data with minimal overhead and without indexing.
+   - Use Case: Best for applications that need to archive large datasets where fast retrieval is less critical.
+
+6. NDB (Clustered):
+   - Features: Provides high availability and scalability by distributing data across multiple nodes. Supports ACID transactions.
+   - Use Case: Ideal for high-availability applications and distributed environments needing real-time performance.
+
+Commands:
+To interact with these engines in MySQL, you typically use SQL commands such as:
+- `CREATE TABLE ... ENGINE=engine_name;` to specify the engine when creating a table.
+- `ALTER TABLE ... ENGINE=engine_name;` to change the engine of an existing table.
+- `SHOW ENGINES;` to list all available engines in the database.
+
+Choosing the right engine depends on your specific needs for data integrity, performance, and scalability.
+
+
+
+Insert Into Data:
+
+Single Line Insert: 
+INSERT INTO Emp_Details(Emp_ID, Emp_Name, Emp_City, Emp_Email) VALUES (1, 'XXXX', 'ABCD' 'Abcd@gmail.com');
+
+Multi-Line Insert:
+INSERT INTO Emp_Details(Emp_ID, Emp_Name, Emp_City, Emp_Email) VALUES (2, 'AAAA', 'XYZ' 'AAAA@gmail.com'), (3, 'PQRS', 'GHI' 'PQRS@gmail.com'), (4, 'LMNO', 'CDE' 'LMNO@gmail.com');
+
+INSERT INTO Emp_Details(ID, Name) VALUES (5, 'NEW');
+
+UPDATE Emp_Details SET City='Mahabaleshwar' WHERE ID=1;
+
+UPDATE Emp_Details City='Kolkata' WHERE City='Calcutta';

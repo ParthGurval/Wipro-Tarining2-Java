@@ -1,0 +1,371 @@
+
+
+
+
+Day-6 
+Date: 01-Aug-2024
+
+File Permissions
+
+	File permissions in Linux determine who can read, write, or execute a file or directory. 
+	Each file or directory has three types of permissions for three types of users:
+
+		user/Owner: The user who owns the file. (u)
+		Group: Users who are part of the file's group.(g)
+		Others: All other users. (o)
+
+	Types of Permissions
+		Read (r): Permission to read the contents of the file.
+		Write (w): Permission to modify the contents of the file.
+		Execute (x): Permission to run the file as a program.
+		
+	Changing Permissions
+		To change permissions, you use the chmod command followed by the permission settings.
+
+	Adding Permissions
+		Add read: chmod u+r file.txt (Adds read permission to the owner)
+		Add write: chmod g+w file.txt (Adds write permission to the group)
+		Add execute: chmod o+x file.txt (Adds execute permission to others)
+
+	Removing Permissions
+		Remove read: chmod u-r file.txt (Removes read permission from the owner)
+		Remove write: chmod g-w file.txt (Removes write permission from the group)
+		Remove execute: chmod o-x file.txt (Removes execute permission from others)
+		
+	Example
+
+		If you want to give the owner all permissions (read, write, execute), the group only read and execute permissions, and 
+		others only read permissions, you would use:
+		
+		chmod u=rwx,g=rx,o=r file.txt
+
+		Or, using the shorthand notation with numbers (where r=4, w=2, x=1):
+		
+		chmod 754 file.txt
+		
+		Summary
+		r (Read) = 4
+		w (Write) = 2
+		x (Execute) = 1
+		
+		r+w = 6, r+x = 5, w+x = 3, r+w+x = 7
+
+	check permission: ls -l
+	
+	-rw-rw-r- = u+g+o
+	
+	chmod role + permission fileName
+	
+	chmod u + x newFile.txt	=> User get execute permission.
+	
+	chmod a + x newFile.txt => All get execute permission.
+	
+	chmod a - x newFilw.txt => Removed execute permission for all.
+	
+	
+	r   replace single character under cursor (no <Esc> needed)
+	
+	i	insert text before cursor, until <Esc> hit
+	
+	a	append text after cursor, until <Esc> hit
+	
+	x 	used to delete character
+	
+	yy	copy (yank, cut) the current line into the buffer
+	
+	p	put (paste) the line(s) in the buffer into the text after the current line
+	
+	:wq<Return>	quit vi, writing out modified file to file named in original invocation
+	
+	:q!<Return>	quit vi even though latest changes have not been saved for this vi call
+	
+	
+Step 1: Install SSHFS
+
+	On Debian/Ubuntu-based distros, run:
+	sudo apt install sshfs
+	
+Step 2: Mount a remote file system
+
+	Once you have SSHFS installed, you can mount a remote file system using the following command:
+	sshfs user@remote_host:/remote/directory /local/mount/point (here sshfs is Secured Shell File System)
+	
+	Replace user with the remote user, remote_host with the IP address or domain name of the remote server, /remote/directory with the directory you want to mount, and /local/mount/point with the local directory where you want to mount the remote file system.
+
+	For example, to mount the /home/user directory on the remote server example.com to the /mnt/example directory on your local machine, run:
+	sshfs user@example.com:/home/user /mnt/example
+
+	You will be prompted to enter the password for the remote user. Once you enter the password, the remote file system will be mounted to the local directory, and you can access it like any other local directory.
+
+Step 3: Unmount a remote file system
+
+	To unmount the remote file system, use the umount command:
+	umount /local/mount/point
+	
+	
+	
+GIT Version Control:
+
+
+What is Git Version Control?
+
+	Git is a distributed version control system (VCS) designed to track changes in source code during software development. 
+	It allows multiple developers to work on a project simultaneously, coordinating their efforts without overwriting each other's work.
+	
+Why We Use Git
+	Collaboration: Enables multiple developers to work on the same project from different locations, merging their changes seamlessly.
+	History Tracking: Keeps a detailed history of every change made to the code, including who made the change and why.
+	Branching and Merging: Allows the creation of branches to work on new features or fixes independently, which can later be merged back into the main codebase.
+	Backup: Provides a backup of the project, enabling restoration to previous states if needed.
+	Automation: Facilitates continuous integration/continuous deployment (CI/CD) pipelines by integrating with various tools to automate testing and deployment processes.
+	
+When We Use Git
+	Software Development: When developing software, especially in teams, to manage changes to the codebase efficiently.
+	Project Management: To keep track of project documentation, version changes, and collaboration.
+	Content Management: For websites, technical documentation, and other content that requires version control.
+	
+Use Cases
+	Collaborative Development: Multiple developers working on the same project need a way to integrate their code changes. For example, a team developing a web application can use Git to manage the codebase.
+	Open Source Projects: Projects on platforms like GitHub where contributors from around the world can contribute to the same project.
+	Feature Development: Developers can create separate branches for new features. Once the feature is complete and tested, it can be merged back into the main branch.
+	Bug Tracking and Fixing: When a bug is found, a developer can create a new branch to fix the bug, test it independently, and then merge the fix back into the main branch.
+	Deployment Pipelines: Integrating Git with CI/CD tools to automate testing and deployment of code whenever changes are pushed to the repository.
+	Versioning Documentation: Managing changes to project documentation, ensuring that the documentation evolves alongside the project.
+	Education and Training: Using Git in coding bootcamps and educational institutions to teach students version control practices and collaborative coding.
+	
+	
+	
+[2:37 pm] Trainer
+
+Git Command Install git Sudo apt install git 
+
+	1. git config Usage: git config user.name “[name]” Usage: git config user.email “[email address]” This command sets the author name and email address respectively to be used with your commits. 
+	2. git init Usage: git init [repository name] This command is used to start a new repository. 
+	3. git clone Usage: git clone [url] This command is used to obtain a repository from an existing URL.
+	4. git add Usage: git add [file] This command adds a file to the staging area. 
+	5. git commit Usage: git commit -m “[ Type in the commit message]” Usage: git commit -a This command commits any files you’ve added with the git add command and also commits any files you’ve changed since then. 6. git diff Usage: git diff This command shows the file differences which are not yet staged. 7. Usage: git diff [first branch] [second branch]
+ 
+ 
+ [2:38 pm] Trainer
+8. git reset Usage: git reset [file] 9. git status Usage: git status This command lists all the files that have to be committed. 10. git rm Usage: git rm [file] This command deletes the file from your working directory and stages the deletion. 11. git log Usage: git log This command is used to list the version history for the current branch. 12. git show Usage: git show [commit] This command shows the metadata and content changes of the specified commit
+ 
+[2:38 pm] Trainer
+13. git branch Usage: git branch This command lists all the local branches in the current repository. Usage: git branch [branch name] This command creates a new branch. Usage: git branch -d [branch name] This command deletes the feature branch. 14. git checkout Usage: git checkout [branch name] This command is used to switch from one branch to another 15. git merge Usage: git merge [branch name] This command merges the specified branch’s history into the current branch. 16. git push Usage: git push [variable name] master
+ 
+ This command sends the committed changes of master branch to your remote repository. Usage: git push [variable name] [branch] This command sends the branch commits to your remote repository. Usage: git push –all [variable name] This command pushes all branches to your remote repository. Usage: git push [variable name] :[branch name] This command deletes a branch on your remote repository. 17. git pull Usage: git pull [Repository Link] This command fetches and merges changes on the remote server to your working directory
+ 
+ 
+ 
+ 
+ Git Commands for terminal
+ 
+	1. git init : Initializes a new Git repository in your current directory. This is the first step to start version controlling a project.
+	2. git config --global user.email "userMail@gmail.com" : Sets your email address for Git globally, meaning it will be used for all repositories on your system.
+	3. git config --global user.name "userName" : Sets your name for Git globally, which will be associated with your commits.
+	4. git add . : Adds all new or changed files in the current directory to the staging area, preparing them to be committed.
+	5. git commit -m "Commiting the file" : Commits the files in the staging area to the repository with a message describing the changes.
+	6. git status : Displays the status of your working directory and the staging area. It shows which files are modified, staged for commit, or untracked.
+	7. git branch : Lists all the branches in your repository and shows the current active branch.
+	8. git branch --list : Another way to list all the branches in your repository.
+	9. git branch branch_Name : Creates a new branch named branch_Name. Branches are used to develop features or fixes separately from the main codebase.
+	10. git checkout branch_name : Switches to the branch named branch_name. This updates your working directory to match the branch’s content.
+	11. git branch -d branch_Name : Delete Branch 
+
+Reset and Revert
+
+	git log 
+	git log --oneline
+	
+	
+	Reset:
+	
+	git reset --hard  numbers
+	git log --oneline
+	
+	Revert:
+	
+	git log --oneline
+	git revert numbers
+	
+	message
+	
+	git log --oneline
+	
+	
+What is Git Rebase?
+	Rebase is a Git command that allows you to integrate changes from one branch into another. Instead of merging, which creates a new commit to combine histories, rebase moves or reapplies commits from one branch onto another, creating a linear, cleaner project history.
+
+Why Use Rebase?
+	Cleaner History: It avoids merge commits, creating a simpler, more understandable project history.
+	Easier to Follow: A linear history is often easier to navigate and understand compared to a complex history with many branches and merges.
+	Conflict Resolution: When rebasing, you resolve conflicts as the commits are reapplied, making it easier to handle changes incrementally.
+
+When to Use Rebase?
+	Feature Branches: When you have a feature branch and you want to keep it up to date with the main branch (e.g., main or master) without merging.
+	Collaborative Work: When working on the same feature with others and you want to avoid messy merge commits.
+	Cleaning Up History: Before merging a feature branch into the main branch, you might rebase to make the commit history cleaner.
+	
+How Rebase Works
+
+	Check out the feature branch you want to rebase:
+	
+		git checkout feature_branch
+		
+	Rebase onto the target branch (e.g., main):
+	
+		git rebase main
+
+		This will take the commits from feature_branch and reapply them on top of the main branch.
+
+	Resolve any conflicts that arise during the rebase process. Git will stop and allow you to fix the conflicts. Once resolved, continue the rebase:
+
+		git rebase --continue
+
+	Finish the rebase. Your feature branch will now have a linear history on top of the main branch. 
+	
+	Example Scenario
+	
+		You have two branches: main and feature_branch.
+		feature_branch has diverged from main.
+		You want to update feature_branch with the latest changes from main.
+		
+	Instead of merging:
+	
+		git checkout feature_branch
+		git merge main
+
+	Which results in a merge commit, you use rebase:
+	
+		git checkout feature_branch
+		git rebase main
+		
+	This reapplies the commits from feature_branch on top of main, resulting in a cleaner, linear history.
+
+	Summary
+
+		Rebase rewrites commit history by moving or reapplying commits from one branch to another.
+		Why: To create a cleaner, more linear project history.
+		When: Keeping feature branches up to date, collaborative work, cleaning up history before merging.
+		Process: Check out the branch, rebase onto target, resolve conflicts, and continue the rebase.
+
+	
+	
+GIT Cloning and Forking
+
+ Cloning and Forking in Git
+
+	Cloning
+
+		Cloning in Git means creating a local copy of a repository that exists on a remote server (like GitHub). 
+		This allows you to work on the project on your own computer.
+
+	Steps to Clone a Repository:
+
+		1. Find the repository URL: On platforms like GitHub, the URL is usually found on the repository’s main page.
+		2. Use the `git clone` command: Run this command with the repository URL.
+			git clone https://github.com/user/repository.git
+   
+		This command creates a complete local copy of the repository, including all the files, branches, and history.
+
+	Push and Pull
+
+		Once you have cloned a repository, you can make changes to your local copy. 
+		To keep your local copy and the remote repository in sync, you use push and pull commands.
+
+1. Pull: Fetches and integrates changes from the remote repository to your local repository.
+
+   
+   git pull
+   
+
+   This command updates your local repository with the latest changes from the remote repository.
+
+2. Push: Sends your local changes to the remote repository.
+
+   
+   git push
+   
+
+   This command uploads your local commits to the remote repository, making them available to others.
+
+
+
+ Forking
+
+	Forking in GitHub (or similar platforms) means creating your own copy of someone else’s repository. 
+	This copy is stored on your GitHub account, allowing you to make changes without affecting the original repository.
+
+	Steps to Fork a Repository:
+
+		1. Click the "Fork" button on the repository page on GitHub.
+		2. A copy of the repository is created under your GitHub account.
+
+		This is useful for contributing to projects. You can make changes in your forked repository and later propose those changes to the original repository by creating a pull request.
+
+	Summary
+
+		- Cloning: Creating a local copy of a remote repository to work on your own computer.
+		- Pull: Fetch and integrate changes from the remote repository to your local copy.
+		- Push: Send your local changes to the remote repository.
+
+		- Forking: Creating your own copy of someone else's repository on GitHub, allowing you to make changes independently.
+
+	Both cloning and forking are essential for collaborating on projects, enabling you to contribute changes and keep your work in sync with the main project.
+	
+	
+Git Pull Request:
+
+	What is a Git Pull Request?
+
+		A pull request (often abbreviated as PR) is a way to propose changes to a repository. 
+		It is a request to the maintainers of the repository to review and potentially merge your changes into the main project.
+
+	Why Use Pull Requests?
+
+		1. Code Review: Allows other developers to review your code, suggest improvements, and discuss potential issues before merging.
+		2. Collaboration: Facilitates collaboration by allowing multiple people to contribute to a project in a controlled and organized manner.
+		3. Quality Control: Helps maintain the quality and consistency of the codebase by ensuring all changes are reviewed.
+
+	How to Create a Pull Request
+
+		1. Fork the Repository: Create a copy of the repository under your own GitHub account.
+		
+		2. Clone the Forked Repository: Download the forked repository to your local machine.
+
+   
+			git clone https://github.com/yourusername/repository.git
+   
+		3. Create a New Branch: Create a new branch for your changes.
+
+			git checkout -b feature-branch
+   
+		4. Make Changes: Make your changes and commit them.
+
+			git add .
+			git commit -m "Describe your changes"
+   
+		5. Push the Changes: Push your changes to your forked repository on GitHub.
+
+			git push origin feature-branch
+   
+		6. Open a Pull Request: On GitHub, navigate to your forked repository and click the "Compare & pull request" button. Provide a title and description for your pull request, then submit it.
+
+	Summary
+
+		- Pull Request: A proposal to merge changes from one branch into another, usually from a feature branch into the main branch.
+		- Purpose: Facilitates code review, collaboration, and quality control.
+		- Process:
+			  1. Fork the repository.
+			  2. Clone the forked repository.
+			  3. Create a new branch.
+			  4. Make and commit changes.
+			  5. Push the changes.
+			  6. Open a pull request on GitHub.
+
+	Pull requests are an essential part of collaborative development, ensuring that changes are reviewed and discussed before being integrated into the main project.
+	
+	Assignment 1: Initialize a new Git repository in a directory of your choice. Add a simple text file to the repository and make the first commit. 
+	
+	Assignment 2: Branch Creation and Switching Create a new branch named 'feature' and switch to it. Make changes in the 'feature' branch and commit them. 
+	
+	Assignment 3: Feature Branches and Hotfixes _x000D_# Confidential - RP Assignment 3: Feature Branches and Hotfixes Create a 'hotfix' branch to fix an issue in the main code. Merge the 'hotfix' branch into 'main' ensuring that the issue is resolved

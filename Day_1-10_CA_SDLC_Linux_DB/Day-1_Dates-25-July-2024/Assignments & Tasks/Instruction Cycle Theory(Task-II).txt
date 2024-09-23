@@ -1,0 +1,61 @@
+
+Instruction Cycle:
+
+Fetch: 
+
+	Objective: Retrieve the next instruction to be executed from memory (RAM).
+	The CU fetches an instruction from memory (RAM) based on the address stored in the Program Counter (PC).
+	It is used To load the instruction into the CPU so it can be processed.
+	The fetch stage is essential for bringing the next instruction from memory into the CPU, initiating the processing cycle.
+	
+	Functionalities:
+
+		Program Counter (PC): Holds the address of the next instruction to be executed. The PC ensures that instructions are executed in the correct sequence.
+		Memory Address Register (MAR): Receives the address from the PC and sends it to the memory.
+		Memory Buffer Register (MBR): Temporarily holds the instruction fetched from memory.
+		Instruction Register (IR): The fetched instruction is transferred here for decoding.
+		Updating PC: The PC is incremented to point to the address of the next instruction, ensuring the CPU can continue processing the next command.
+	
+
+Decode: 
+
+	The decode stage involves interpreting the fetched instruction to understand what action is required.
+	The CU decodes the fetched instruction to understand what actions are required.
+	we use this To determine the operation to be performed and identify the necessary operands.
+	The decode stage is crucial for translating the instruction into a series of actions that the CPU can perform, setting up the necessary components for execution.
+	
+	Functionalities:
+
+		Instruction Analysis: The Control Unit (CU) examines the instruction stored in the IR.
+		Opcode Identification: The CU identifies the operation code (opcode), which specifies the type of operation to be performed (e.g., arithmetic, logical, data transfer).
+		Operand Identification: The CU identifies the operands needed for the instruction, which may involve additional fetches if the operands are stored in memory.
+		Control Signal Generation: The CU prepares the control signals that will direct the execution stage.
+
+
+Execute: 
+
+	The execute stage involves performing the operation specified by the decoded instruction.
+	The CU sends signals to the ALU, registers, and other components to perform the necessary operations.
+	It is used To carry out the actual computation or data manipulation defined by the instruction.
+	The execute stage is where the CPU performs the actual work of the instruction, whether it’s a computation, logical decision, or data transfer.
+	
+	Functionalities:
+
+		Control Signal Dispatch: The CU sends control signals to the relevant components (ALU, registers, memory).
+		Operand Fetch: If operands are needed from memory, they are fetched and transferred to the appropriate registers.
+		Operation Execution: The ALU performs the specified operation (e.g., addition, subtraction, logical comparisons).
+		Flag Update: The ALU may update status flags based on the result of the operation (e.g., zero flag, carry flag).
+		
+
+Store: 
+
+	The store stage involves writing the results of the executed instruction back into memory or registers.
+	The results of the operations are stored back in the registers or memory.
+	It is used To save the output of the instruction so it can be used in future operations or made available for further processing.
+	The store stage ensures that the results of the instruction are saved and accessible for subsequent instructions or processes, completing the instruction cycle.
+	
+	Functionalities:
+
+		Result Transfer: The result from the ALU is transferred to the appropriate destination, such as a register or memory location.
+		Memory Write: If the result needs to be stored in memory, the address is sent to the MAR, and the data is written from the MBR to the specified memory location.
+		Register Update: If the result is to be stored in a register, the CU directs the result to be placed in the specified register.

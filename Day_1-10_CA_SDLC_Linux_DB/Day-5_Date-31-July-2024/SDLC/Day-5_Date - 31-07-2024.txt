@@ -1,0 +1,376 @@
+
+
+Day-5 // Date: 31-07-2024
+
+
+Effective Communication:
+
+	- To Provide Quality Application.
+	- Understand the requirements.
+	- Clearity on the issues end user is expecting.
+	- Clearity on what other's teams are doing.
+	
+How we need to communicate:
+
+	- Concise
+	- Simple language
+	- Precise
+
+what and who?
+
+
+
+What is Testing?
+
+Why we need Testing?:
+
+	- To check the application whether it is build as per requirement.
+	- Error free performance of the application.
+	- To check Safety parameters of the software.
+	- To check User Friendly UI.
+	- To get good product.
+	- Fast Development
+	
+Why do we need tester when we have developer:
+
+while developer developing software suppose the developer is building an application which has 10 pages and has done with 6 pages and working on 7 and while
+working on page 7 it affect the page 4 then developer cant go back and check thats why we need tester to view application from third person point of view.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**********  Task **********
+
+Why Testing is important?
+
+	what is testing?
+	
+	->  While an developer is developing an software it might have some bugs or error remains in the development so to avoid this we do software testing.
+		Software testing is the process of checking a computer program or application to make sure it works correctly and error free according to requirements.
+
+
+		1. To ensure Quality of application:
+		
+			- Testing helps ensure that the software meets the required quality standards and functions as expected. 
+			- It helps to improve the quality of the application.
+		
+		2. Detects Defects: 
+		
+			- Testing identifies defects, bugs, or errors in the software, which can be fixed before the product is released to the end-users.
+
+		3. Reduces Risk: 
+		
+			- Testing reduces the risk of delivering a low-quality product that might lead to financial losses, damage to reputation, or even safety risks.
+
+		4. Saves Time and Cost: 
+		
+			- Identifying and fixing defects early in the development cycle saves time and cost compared to finding and fixing them later in the cycle or after release.
+
+		5. Improves Customer Satisfaction: 
+		
+			- Testing ensures that the software meets the customer's or stakeholders requirements and expectations, leading to higher customer satisfaction and loyalty.
+
+		6. Enhances Security: 
+		
+			- Testing helps to identify and fix security vulnerabilities, protecting the software and its users from potential threats.
+
+		7. Verification : 
+		
+			- Testing gives developers, stakeholders, and customers confidence in the software, as it has been thoroughly validated and verified.
+
+		8. Improves User Experience: 
+		
+			- Testing ensures that the software is user-friendly, intuitive, and provides a positive user experience.
+
+		9. Saves Time and Money: 
+		
+			- Identifying and fixing defects early in the development cycle saves time and cost compared to finding and fixing them later in the cycle or after release.
+
+	   10. Provides Competitive Advantage: 
+	   
+			- Testing helps to provide a competitive advantage by ensuring that the software is of high quality, reliable, and secure.
+
+
+What will go wrong if software or application is not tested?
+
+	1. Bugs and Errors: 
+	
+		- If not tested then Unidentified and unknown bugs and errors can cause the software to crash, freeze, or produce incorrect results, leading to user frustration and loss of trust.
+
+	2. Security threast and Vulnerabilities: 
+	
+		- Un-tested software can contain security vulnerabilities, making it susceptible to hacking, data breaches, and cyber attacks, which can compromise sensitive user data
+
+	3. System Crashes: 
+	
+		- Un-tested software can cause system crashes, leading to downtime, lost productivity, loss of data and revenue losses.
+
+	4. Performance Issues: 
+	
+		- Un-tested software can result in slow performance, lag, or slow loading times, leading to user frustration and abandonment.
+
+	5. Data Loss or Corruption: 
+	
+		- Un-tested software can lead to data loss or corruption, resulting in financial losses, legal liabilities, and damage to reputation.
+
+	6. Financial Losses: 
+	
+		- Un-tested software can result in financial losses due to lost productivity, revenue, and customer acquisition costs.
+		
+	7. Incompatibility Issues: 
+	
+		- Un-tested software may not be compatible with different operating systems, browsers, or devices, leading to user frustration and support issues.
+
+	8. Scalability Issues: 
+	
+		- Un-tested software may not be able to handle increased traffic or user load, leading to scalability issues and performance degradation.
+
+	9. User Experience Issues: 
+	
+		- Un-tested software can lead to a poor user experience, including confusing interfaces, unclear instructions, and frustrating workflows.
+
+   10. Integration Issues: 
+   
+		- Un-tested software may not integrate seamlessly with other systems, leading to integration issues and data inconsistencies.
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Level of testing:
+
+	1. Unit Testing: 
+	
+		Definition: Unit testing involves testing individual components or pieces of code (known as units) in isolation to ensure they work correctly.
+
+		Done by the Developer side
+
+		Purpose: To verify that each unit of the software performs as expected. Units are typically functions, methods, or classes.
+
+		Example: Testing a function that calculates the total price in a shopping cart to ensure it returns the correct amount.
+	
+	2. Integration Testing:
+	
+		Definition: Integration testing checks how different units or modules of the software work together.
+
+		90% done by the tester and 10 % done by the developer
+
+		Purpose: To ensure that combined parts of the application interact as intended. This testing identifies issues with interfaces and data flow between integrated units.
+
+		Example: Testing the interaction between a payment processing module and a shopping cart module to ensure data flows correctly and transactions are processed.
+	
+	3. System Testing:
+	
+		Definition: System testing involves testing the entire software system as a whole to verify that it meets the specified requirements.
+	
+		100% done by the tester
+
+		Purpose: To validate that the integrated components work together correctly and the overall system performs as expected.
+
+		Example: Testing the complete e-commerce application to ensure that all features (e.g., browsing products, adding items to the cart, and checking out) work together seamlessly.
+	
+	4. Acceptance testing:
+	
+		Definition: Acceptance testing is performed to determine whether the software meets the acceptance criteria and is ready for delivery to the end users.
+
+		Purpose: To ensure that the software meets business requirements and is suitable for deployment.
+	
+		a. Aplha Testing:
+		
+			Definition: Alpha testing is an early testing phase performed by the development team or internal testers before the software is released to a broader audience.
+
+			Purpose: To identify and fix bugs and issues before the software reaches external users. This testing occurs in a controlled environment.
+
+			Example: The development team tests a new feature internally to catch any critical bugs and make improvements before releasing it to beta testers.
+		
+		b. Beta Tesing:
+		
+			Definition: Beta testing is conducted by a selected group of external users who use the software in real-world scenarios before its official release.
+
+			Purpose: To gather feedback from actual users, identify any remaining issues, and ensure that the software performs well in various environments and use cases.
+
+			Example: A company releases a beta version of its application to a group of selected users to test features and gather feedback on usability and performance.
+			
+
+Environments: 
+
+	- In software development and testing, environments refer to the different settings or configurations in which software is developed, tested, and deployed. 
+	- Each environment serves a specific purpose in the lifecycle of software and helps ensure that the application works correctly under various conditions. 
+	
+	In simple terms, environments in software development are different "places" where software is created, tested, and used. 
+	Each place has a specific role to make sure the software works correctly and smoothly.
+	
+	
+Reporting a Bug:
+
+	- Reporting a Bug is the process of identifying and documenting an issue in the software that doesn't work as expected. 
+	- When you find a bug, you write down details about it so the development team can understand and fix the problem. 
+	- Reporting a bug means letting the development team know about a problem or error you’ve found in the software.
+	- Imagine you’re using an app, and something doesn’t work right, like a button that doesn’t do anything when you click it. 
+	  Reporting a bug is like telling the app’s creators about this issue so they can fix it.
+	
+	This typically includes:
+
+	Description: A clear explanation of what the bug is.
+	Steps to Reproduce: How to make the bug happen.
+	Expected Result: What should have happened.
+	Actual Result: What actually happened.
+	Screenshots/Logs: Any visual evidence or error messages that can help.
+	
+	
+Bug Triage
+
+	- Bug Triage is the process of reviewing and prioritizing reported bugs to decide which ones need to be fixed first. 
+	- Bug triage is the process of reviewing and prioritizing reported bugs to decide which ones should be fixed first.
+	- Imagine there are a lot of problems reported with an app, like different buttons not working, slow performance, or crashes. 
+	  Bug triage is like sorting these problems by importance and deciding which ones to fix first.
+	
+	It involves:
+
+		Reviewing: Going through each reported bug to understand it.
+		Categorizing: Grouping bugs by their type or severity (e.g., critical, major, minor).
+		Prioritizing: Deciding which bugs are the most important to fix based on factors like how much they affect users or how difficult they are to fix.
+		Assigning: Giving the bugs to the right developers to fix.
+
+
+
+Priority and Severity:
+
+Priority and Severity are terms used in software testing to describe different aspects of bugs or issues. Here’s a simple explanation with examples:
+
+1. Severity:
+	Definition: 
+		Severity refers to the impact or seriousness of a bug on the functionality of the software. 
+		It describes how much the bug affects the software’s performance or usability.
+
+	In Simple Words: Severity is about how big of a problem the bug is.
+
+	Example:
+
+	High Severity: A bug that causes the app to crash every time a user tries to make a purchase. 
+				   This is a serious problem because it prevents users from completing transactions.
+	
+	Medium Severity: A bug that causes the app to display incorrect product prices only on certain screens, 
+					 but does not crash the app or prevent users from making purchases.
+	
+	Low Severity: A typo in the app’s "About" section. This doesn’t affect the functionality but is a minor issue.
+	
+2. Priority:
+
+	Definition: 
+	
+		Priority refers to how quickly a bug needs to be fixed. It describes the urgency of addressing the bug.
+
+	In Simple Words: Priority is about how soon the bug should be fixed.
+
+	Example:
+
+		High Priority: The same bug that causes the app to crash when making a purchase (high severity) is also marked high priority because fixing it is urgent to avoid losing customers.
+		Low Priority: The typo in the "About" section (low severity) might be marked low priority because it’s a minor issue and doesn’t need immediate attention.
+
+	Putting It Together:
+		High Severity, High Priority: A critical system crash that stops the app from working.
+		High Severity, Low Priority: A major issue that affects functionality but can wait if there are more urgent fixes needed.
+		Low Severity, High Priority: An issue with a feature that is crucial for a key marketing campaign or customer event.
+		Low Severity, Low Priority: Minor cosmetic issues or small, non-impactful bugs.
+
+In short:
+
+Severity tells you how serious the bug is.
+Priority tells you how soon it should be fixed.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+********** Task **********
+
+Create Bugs in jira
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Releasing to the End User:
+
+	When releasing a software application to end users, two possible outcomes are success or failure. 
+	
+	Here’s a simple breakdown:
+	
+	Success:
+
+	What It Means:
+
+		- The software works as intended and meets the needs of users.
+		- Users are happy with the performance and functionality.
+		- The software is stable, with minimal bugs or issues.
+
+	Indicators of Success:
+
+		- Positive Feedback: Users are satisfied and provide good reviews or comments.
+		- Smooth Operations: The software runs smoothly without major issues or crashes.
+		- Effective Features: All key features work as expected and help users with their tasks.
+
+	Example:
+	
+		- After releasing a new construction management app, users find it easy to register, manage invoices, and track orders. The app runs without errors, and users are pleased with how well it helps them manage their projects.
+
+
+	Failure:
+
+	What It Means:
+
+		- The software doesn’t work correctly or fails to meet user expectations.
+		- Users encounter significant issues or bugs that affect their experience.
+		- The software might have critical errors or performance problems.
+
+	Indicators of Failure:
+
+		- Negative Feedback: Users report frequent problems and are unhappy with the software.
+		- Frequent Crashes or Bugs: The software often crashes or has major bugs that disrupt its use.
+		- Unmet Needs: Key features don’t work as expected, making the software difficult or impossible to use effectively.
+		
+	Example: 
+	
+		- After releasing the same app, users face frequent crashes when trying to view invoices or track orders. Critical features are broken, and users complain about the app’s performance, making it difficult for them to manage their projects.
+
+	Summary:
+	
+		- Success means the software works well, users are satisfied, and the software meets its intended goals.
+		
+		- Failure means there are significant problems with the software, users are frustrated, and it doesn’t perform as expected.
+		
+		
+		
+		
+Rollback
+
+	- Rollback is the process of returning a system or software to a previous state because something went wrong with a recent update or change. 
+	- It’s like using an "undo" button to revert to the version that was working fine before the issue occurred.
+
+
+Rollback Strategies
+
+	Rollback Strategies are the plans and methods used to perform a rollback smoothly and effectively. Here are some common strategies:
+
+1. Full Rollback: 
+		- Completely revert to the previous version of the software. 
+		- This is the simplest form and is used when the new version has critical issues.
+
+2. Incremental Rollback: 
+		- Only revert the parts of the software that are causing problems while keeping other changes intact. 
+		- This is useful when only certain features or components are faulty.
+
+3. Feature Toggle: 
+		- Use switches in the code to turn off problematic features without reverting all changes. 
+		- This allows you to quickly disable specific parts of the new version.
+
+4. Blue-Green Deployment: 
+		- Maintain two identical environments (blue and green). 
+		- During an update, switch users to the new environment. 
+		- If issues arise, switch back to the old environment without downtime.
+
+5. Canary Deployment: 
+		- Roll out the update to a small, controlled group of users first. 
+		- If no major issues are found, gradually roll it out to everyone. 
+		- If problems are detected, rollback only affects a small group.
+
+These strategies help ensure that rollbacks are done in a way that minimizes disruption and quickly restores the system to a stable state.
