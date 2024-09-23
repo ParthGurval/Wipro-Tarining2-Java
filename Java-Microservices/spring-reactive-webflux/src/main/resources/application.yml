@@ -1,0 +1,12 @@
+
+server:
+  port: 9090
+
+
+spring:
+  r2dbc:
+    username: root
+    password: Parth@1020
+    url: r2dbc:mysql://localhost:3306/my_spring_webflux  
+    
+
