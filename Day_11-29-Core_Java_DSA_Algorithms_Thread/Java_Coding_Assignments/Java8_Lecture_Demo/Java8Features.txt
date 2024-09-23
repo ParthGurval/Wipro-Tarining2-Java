@@ -1,0 +1,70 @@
+
+Java-8
+-------:
+
+1.Functional Interface
+2. static and default methods
+3. Lambda Expression
+4. Stream API
+5. java.time.*;
+6. Optional  return type
+7. method  and constructor reference (::)
+
+
+Functional Interface:
+
+@FunctionalInterface
+public interface  MyInterface{
+
+public abstract	int add(int a, int b);
+
+}
+
+class  Demo{
+
+	main(){
+
+	MyInterface mi =	(int a, int b) -> { return a+b;  } ;
+				mi.add(4,5);
+
+	}
+
+
+
+}
+
+
+
+-------------------------------------
+Types of Functional interfaces and Lambda Expressions:
+
+1.Consumer Functional interface  ---> Consumer LambdaExp
+	
+	void   setData(T  t);  ---==>     (T t)->{System.out.println(t);}
+	
+
+2. Supplier  Functional interface  ---> Supplier LambdaExp
+
+	 T    getData(); =====>        ()->{  return "hello";}
+
+
+3. Predicate  Functional interface  ---> Predicate LambdaExp
+
+	Boolean    validate(T t);   ====>    (T t)->{ return t > 0;}
+
+
+4. Function     Functional interface  ---> Function LambdaExp
+
+	 T   methodOne(E e);  ====>   (E e)->{ return t;}  
+					---> (String name) ->{  return name.length();}
+
+5. Comparator type lambda exp
+
+
+
+
+
+
+
+
+

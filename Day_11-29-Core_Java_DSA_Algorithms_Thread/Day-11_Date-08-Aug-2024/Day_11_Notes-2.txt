@@ -1,0 +1,362 @@
+
+
+Day_11_Notes
+
+Date: 08-08-2024
+
+What is Collection in java 
+	
+	In programming, collections are a fundamental concept used to manage and organize groups of related objects. 
+	Collections provide various ways to store, retrieve, and manipulate data efficiently. Arrays are one type of collection, 
+	but there are several other types of collections available, especially in high-level languages. 
+	
+	In programming, collections are a way to store and manage groups of related objects. 
+	Think of it like a container that holds multiple items, making it easy to access and manipulate them. 
+	Arrays are one type of collection, but there are many others, especially in high-level languages.
+
+	### Definition of Collections in Arrays
+
+	**Array**:
+		An array is a collection of elements of the same type stored in contiguous memory locations. 
+		Arrays are fixed-size collections, meaning the size must be defined at the time of creation and cannot be changed dynamically.
+
+	### Why We Use Collections
+
+	1. **Data Management**:
+	   Collections allow you to manage multiple items of data in a structured way, making it easier to perform operations like sorting, searching, and iterating.
+
+	2. **Efficiency**:
+	   Using collections can improve the efficiency of algorithms by providing specialized data structures for specific operations.
+
+	3. **Convenience**:
+	   Collections come with built-in methods and properties for manipulating data, reducing the need for custom implementations of common operations.
+
+	4. **Flexibility**:
+	   Collections provide various types and structures (like lists, sets, and maps) to handle different scenarios, from ordered data to unique elements.
+
+	### When and Where to Use Collections
+
+	- **When to Use**:
+	  - When you need to store multiple items of the same type.
+	  - When you need to perform operations like sorting, searching, or iterating over elements.
+	  - When you need to manage a variable number of elements dynamically (for types beyond arrays).
+
+	- **Where to Use**:
+	  - **Data Processing**: Handling lists of items, results from database queries, etc.
+	  - **Algorithm Implementation**: Implementing algorithms that require data manipulation.
+	  - **User Interface**: Managing and displaying lists or sets of items to users.
+
+	### Types of Collections
+
+	Different programming languages offer different types of collections. Here are some common types across several languages:
+
+	1. **Array**:
+	   - **Definition**: A fixed-size collection of elements.
+	   - **Example**: `int[] numbers = {1, 2, 3, 4, 5};` (Java)
+
+	2. **List**:
+	   - **Definition**: An ordered, resizable collection of elements.
+	   - **Examples**:
+		 - **ArrayList** (Java): `List<String> list = new ArrayList<>();`
+		 - **Python List**: `my_list = [1, 2, 3, 4]`
+
+	3. **Set**:
+	   - **Definition**: A collection of unique elements without a specific order.
+	   - **Examples**:
+		 - **HashSet** (Java): `Set<String> set = new HashSet<>();`
+		 - **Python Set**: `my_set = {1, 2, 3}`
+
+	4. **Map** (or Dictionary):
+	   - **Definition**: A collection of key-value pairs where each key is unique.
+	   - **Examples**:
+		 - **HashMap** (Java): `Map<String, Integer> map = new HashMap<>();`
+		 - **Python Dictionary**: `my_dict = {'key1': 'value1', 'key2': 'value2'}`
+
+	5. **Queue**:
+	   - **Definition**: A collection that follows the FIFO (First In, First Out) principle.
+	   - **Examples**:
+		 - **LinkedList** (Java, when used as a queue): `Queue<Integer> queue = new LinkedList<>();`
+		 - **Python Queue**: `from queue import Queue; q = Queue()`
+
+	6. **Stack**:
+	   - **Definition**: A collection that follows the LIFO (Last In, First Out) principle.
+	   - **Examples**:
+		 - **Stack** (Java): `Stack<Integer> stack = new Stack<>();`
+		 - **Python List** (used as a stack): `stack = []`
+
+	### Examples
+
+	**Array Example in Java**:
+	```java
+	int[] numbers = {1, 2, 3, 4, 5};
+	for (int number : numbers) {
+		System.out.println(number);
+	}
+	```
+
+	**List Example in Python**:
+	```python
+	my_list = [1, 2, 3, 4, 5]
+	for number in my_list:
+		print(number)
+	```
+
+	**Set Example in Java**:
+	```java
+	Set<String> set = new HashSet<>();
+	set.add("apple");
+	set.add("banana");
+	set.add("apple");  // Duplicate, will not be added
+	for (String item : set) {
+		System.out.println(item);
+	}
+	```
+
+	**Map Example in Python**:
+	```python
+	my_dict = {'name': 'John', 'age': 30}
+	print(my_dict['name'])  # Outputs: John
+	```
+
+	Understanding the different types of collections and when to use them is crucial for writing efficient and effective code.
+	
+	
+	
+	Arrays
+		Definition:
+		An array is a data structure that holds a fixed-size sequence of elements of the same type. The size of an array is defined when it is created and cannot be changed dynamically.
+
+		Characteristics:
+
+		Fixed Size: Once created, the size of an array cannot be changed.
+		Indexed Access: Elements are accessed using an index, which provides O(1) time complexity for access operations.
+		Contiguous Memory: Arrays are stored in contiguous memory locations, which allows efficient access to elements.
+		Homogeneous Elements: All elements in an array are of the same type.
+		When to Use:
+
+		When you know the number of elements in advance.
+		When you need efficient access and manipulation of elements by index.
+		When memory usage is a concern and you want a simple, low-overhead data structure.
+		Examples:
+
+		int[] numbers = {1, 2, 3, 4, 5};
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.println(numbers[i]);
+		}
+		
+	Lists
+		Definition:
+		A list is a data structure that represents a collection of elements that can be dynamically resized. Lists can typically hold elements of different types and provide various methods for adding, removing, and manipulating elements.
+
+		Characteristics:
+
+		Dynamic Size: Lists can grow or shrink in size as elements are added or removed.
+		Indexed Access: Like arrays, lists support indexed access to elements, providing O(1) time complexity for access operations.
+		Non-Contiguous Memory: Lists may use non-contiguous memory locations and often involve overhead due to dynamic resizing and additional features.
+		Heterogeneous Elements: In some languages (e.g., Python), lists can hold elements of different types.
+		When to Use:
+
+		When the size of the collection may change dynamically.
+		When you need features like inserting or removing elements at arbitrary positions.
+		When you require methods for sorting, searching, or other operations on the collection.
+		Examples:
+
+		import java.util.ArrayList;
+		import java.util.List;
+
+		List<String> list = new ArrayList<>();
+		list.add("Apple");
+		list.add("Banana");
+		list.add("Cherry");
+
+		for (String item : list) {
+			System.out.println(item);
+		}
+
+
+	ArrayList:
+	
+	An ArrayList in Java is a resizable array implementation of the List interface, used to store a dynamically sized collection of elements.
+
+	Why We Use It:
+
+	It automatically resizes as elements are added or removed.
+	It provides convenient methods for adding, removing, and accessing elements.
+	When to Use It:
+
+	When you need a flexible-sized array with dynamic insertion and removal of elements.
+	
+	import java.util.ArrayList;
+
+	public class ArrayListExample {
+		public static void main(String[] args) {
+			ArrayList<String> list = new ArrayList<>();
+			list.add("Apple");
+			list.add("Banana");
+			list.add("Cherry");
+			
+			// Access elements
+			System.out.println(list.get(1)); // Output: Banana
+			
+			// Remove an element
+			list.remove("Banana");
+			
+			// Iterate over the list
+			for (String fruit : list) {
+				System.out.println(fruit);
+			}
+		}
+	}
+
+
+explain API in java point of view
+
+
+		In the context of Java, an **API (Application Programming Interface)** typically refers to a set of predefined classes, methods, 
+		and interfaces provided by libraries or frameworks that developers can use to build applications. 
+		It defines how software components should interact, providing a way to use existing functionality without needing to understand the underlying code.
+
+		### Key Aspects of APIs in Java
+
+		1. **Java Standard Library (JDK API)**:
+		   - The Java Development Kit (JDK) includes a comprehensive API that provides a wide range of functionalities, 
+		   such as data structures, file I/O, networking, and more. For instance, `java.util.ArrayList` is part of the Java Collections Framework API.
+
+		2. **Third-Party Libraries**:
+		   - Many third-party libraries and frameworks offer APIs to extend Java's capabilities. Examples include libraries for web development 
+		   (e.g., Spring), database interaction (e.g., Hibernate), and JSON processing (e.g., Jackson).
+
+		3. **Creating APIs**:
+		   - When you develop your own Java library or framework, you create an API by defining classes, methods, and interfaces that users 
+		   of your library can interact with.
+
+		### Components of a Java API
+
+		1. **Classes**:
+		   - Java APIs include classes that encapsulate related functionalities. For example, `java.util.HashMap` provides a way to store key-value pairs.
+
+		2. **Methods**:
+		   - Methods are functions defined within classes that perform specific actions. They are part of the API's contract, specifying what operations 
+		   are available.
+
+		3. **Interfaces**:
+		   - Interfaces define a contract for classes without providing implementation. For example, `java.util.List` is an interface that different 
+		   classes (e.g., `ArrayList`, `LinkedList`) implement.
+
+		4. **Packages**:
+		   - Java APIs are organized into packages, which group related classes and interfaces. For example, `java.io` contains classes for input 
+		   and output operations.
+
+		### How to Use a Java API
+
+		1. **Import Statements**:
+		   - To use classes and methods from a Java API, you need to import them into your code. For example:
+			 ```java
+			 import java.util.ArrayList;
+			 import java.util.HashMap;
+			 ```
+
+		2. **Creating Instances**:
+		   - Instantiate classes from the API and use their methods. For example:
+			 ```java
+			 ArrayList<String> list = new ArrayList<>();
+			 list.add("Hello");
+			 list.add("World");
+			 
+			 HashMap<String, Integer> map = new HashMap<>();
+			 map.put("key1", 10);
+			 map.put("key2", 20);
+			 ```
+
+		3. **Using Methods**:
+		   - Call methods provided by the API to perform operations. For example:
+			 ```java
+			 System.out.println(list.size());  // Output: 2
+			 System.out.println(map.get("key1"));  // Output: 10
+			 ```
+
+		### Examples of Java APIs
+
+		1. **Java Collections Framework**:
+		   - **Classes**: `ArrayList`, `HashSet`, `HashMap`
+		   - **Interfaces**: `List`, `Set`, `Map`
+		   - **Usage**:
+			 ```java
+			 import java.util.ArrayList;
+			 import java.util.List;
+
+			 public class Example {
+				 public static void main(String[] args) {
+					 List<String> list = new ArrayList<>();
+					 list.add("Java");
+					 list.add("API");
+					 
+					 for (String item : list) {
+						 System.out.println(item);
+					 }
+				 }
+			 }
+			 ```
+
+		2. **Java Stream API**:
+		   - **Classes**: `Stream`, `Collectors`
+		   - **Usage**:
+			 ```java
+			 import java.util.Arrays;
+			 import java.util.List;
+			 import java.util.stream.Collectors;
+
+			 public class StreamExample {
+				 public static void main(String[] args) {
+					 List<String> list = Arrays.asList("apple", "banana", "cherry");
+					 
+					 List<String> filtered = list.stream()
+												 .filter(s -> s.startsWith("a"))
+												 .collect(Collectors.toList());
+					 
+					 System.out.println(filtered);  // Output: [apple]
+				 }
+			 }
+			 ```
+
+		3. **Java I/O API**:
+		   - **Classes**: `File`, `FileReader`, `BufferedReader`
+		   - **Usage**:
+			 ```java
+			 import java.io.FileReader;
+			 import java.io.BufferedReader;
+			 import java.io.IOException;
+
+			 public class FileReadExample {
+				 public static void main(String[] args) {
+					 try (BufferedReader reader = new BufferedReader(new FileReader("example.txt"))) {
+						 String line;
+						 while ((line = reader.readLine()) != null) {
+							 System.out.println(line);
+						 }
+					 } catch (IOException e) {
+						 e.printStackTrace();
+					 }
+				 }
+			 }
+			 ```
+
+		### Creating Your Own Java API
+
+		1. **Define Classes and Interfaces**:
+		   - Create classes and interfaces that provide the functionality you want to expose.
+
+		2. **Document Your API**:
+		   - Use JavaDoc comments to document the classes, methods, and parameters. This helps users understand how to use your API.
+
+		3. **Package Your API**:
+		   - Organize your classes into packages and distribute them as JAR files or libraries.
+
+		4. **Versioning and Maintenance**:
+		   - Manage versioning and updates to ensure backward compatibility and improvements.
+
+		### Summary
+
+		In Java, an API provides a way to interact with pre-defined functionality and libraries through a set of classes, methods, and interfaces. 
+		It simplifies development by abstracting complex operations and enabling code reuse. 
+		Understanding how to use and create APIs is crucial for effective Java programming and software development.
